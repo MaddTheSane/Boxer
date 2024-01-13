@@ -449,6 +449,102 @@
 		55F0B79926ABFEE80077E58C /* version.cc in Sources */ = {isa = PBXBuildFile; fileRef = 55F0B76B26ABFEE80077E58C /* version.cc */; };
 		55F0B79C26ABFF680077E58C /* program_choice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55F0B79B26ABFF680077E58C /* program_choice.cpp */; };
 		55F0B79D26ABFF680077E58C /* program_choice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55F0B79B26ABFF680077E58C /* program_choice.cpp */; };
+		55F19B172B52224000BA48F9 /* DECOMPOSITION.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B122B52222900BA48F9 /* DECOMPOSITION.TXT */; };
+		55F19B182B52224000BA48F9 /* CAPITAL_SMALL.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B132B52222900BA48F9 /* CAPITAL_SMALL.TXT */; };
+		55F19B192B52224000BA48F9 /* MAIN.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B142B52222900BA48F9 /* MAIN.TXT */; };
+		55F19B1A2B52224000BA48F9 /* ASCII.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B162B52222900BA48F9 /* ASCII.TXT */; };
+		55F19B1B2B52224000BA48F9 /* CP_30006.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B0D2B52222900BA48F9 /* CP_30006.TXT */; };
+		55F19B1C2B52224000BA48F9 /* CP_30000.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B0E2B52222900BA48F9 /* CP_30000.TXT */; };
+		55F19B1D2B52224000BA48F9 /* CP_30034.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B102B52222900BA48F9 /* CP_30034.TXT */; };
+		55F19B1E2B52225D00BA48F9 /* CP_865.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF02B52222900BA48F9 /* CP_865.TXT */; };
+		55F19B1F2B52225D00BA48F9 /* CP_737.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF12B52222900BA48F9 /* CP_737.TXT */; };
+		55F19B202B52225D00BA48F9 /* CP_864.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF22B52222900BA48F9 /* CP_864.TXT */; };
+		55F19B212B52225D00BA48F9 /* CP_866.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF32B52222900BA48F9 /* CP_866.TXT */; };
+		55F19B222B52225D00BA48F9 /* CP_863.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF42B52222900BA48F9 /* CP_863.TXT */; };
+		55F19B232B52225D00BA48F9 /* CP_862.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF52B52222900BA48F9 /* CP_862.TXT */; };
+		55F19B242B52225D00BA48F9 /* CP_860.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF62B52222900BA48F9 /* CP_860.TXT */; };
+		55F19B252B52225D00BA48F9 /* CP_874.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF72B52222900BA48F9 /* CP_874.TXT */; };
+		55F19B262B52225D00BA48F9 /* CP_861.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF82B52222900BA48F9 /* CP_861.TXT */; };
+		55F19B272B52225D00BA48F9 /* CP_1256.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF92B52222900BA48F9 /* CP_1256.TXT */; };
+		55F19B282B52225D00BA48F9 /* CP_437.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFA2B52222900BA48F9 /* CP_437.TXT */; };
+		55F19B292B52225D00BA48F9 /* CP_1257.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFB2B52222900BA48F9 /* CP_1257.TXT */; };
+		55F19B2A2B52225D00BA48F9 /* CP_1255.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFC2B52222900BA48F9 /* CP_1255.TXT */; };
+		55F19B2B2B52225D00BA48F9 /* CP_1254.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFD2B52222900BA48F9 /* CP_1254.TXT */; };
+		55F19B2C2B52225D00BA48F9 /* CP_1250.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFE2B52222900BA48F9 /* CP_1250.TXT */; };
+		55F19B2D2B52225D00BA48F9 /* CP_1251.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFF2B52222900BA48F9 /* CP_1251.TXT */; };
+		55F19B2E2B52225D00BA48F9 /* CP_1253.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B002B52222900BA48F9 /* CP_1253.TXT */; };
+		55F19B2F2B52225D00BA48F9 /* CP_1252.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B022B52222900BA48F9 /* CP_1252.TXT */; };
+		55F19B302B52225D00BA48F9 /* CP_775.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B032B52222900BA48F9 /* CP_775.TXT */; };
+		55F19B312B52225D00BA48F9 /* CP_1258.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B042B52222900BA48F9 /* CP_1258.TXT */; };
+		55F19B322B52225D00BA48F9 /* CP_850.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B052B52222900BA48F9 /* CP_850.TXT */; };
+		55F19B332B52225D00BA48F9 /* CP_852.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B072B52222900BA48F9 /* CP_852.TXT */; };
+		55F19B342B52225D00BA48F9 /* CP_856.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B082B52222900BA48F9 /* CP_856.TXT */; };
+		55F19B352B52225D00BA48F9 /* CP_857.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B092B52222900BA48F9 /* CP_857.TXT */; };
+		55F19B362B52225D00BA48F9 /* CP_869.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B0A2B52222900BA48F9 /* CP_869.TXT */; };
+		55F19B372B52225D00BA48F9 /* CP_855.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B0B2B52222900BA48F9 /* CP_855.TXT */; };
+		55F19B382B52225D00BA48F9 /* CP_899.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE02B52222900BA48F9 /* CP_899.TXT */; };
+		55F19B392B52225D00BA48F9 /* CP_720.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE12B52222900BA48F9 /* CP_720.TXT */; };
+		55F19B3A2B52225D00BA48F9 /* CP_708.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE22B52222900BA48F9 /* CP_708.TXT */; };
+		55F19B3B2B52225D00BA48F9 /* CP_1169.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE32B52222900BA48F9 /* CP_1169.TXT */; };
+		55F19B3C2B52225D00BA48F9 /* CP_3021.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE42B52222900BA48F9 /* CP_3021.TXT */; };
+		55F19B3D2B52225D00BA48F9 /* CP_778.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE52B52222900BA48F9 /* CP_778.TXT */; };
+		55F19B3E2B52225D00BA48F9 /* CP_3848.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE62B52222900BA48F9 /* CP_3848.TXT */; };
+		55F19B3F2B52225D00BA48F9 /* CP_777.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE82B52222900BA48F9 /* CP_777.TXT */; };
+		55F19B402B52225D00BA48F9 /* CP_776.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE92B52222900BA48F9 /* CP_776.TXT */; };
+		55F19B412B52225D00BA48F9 /* CP_1117.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AEA2B52222900BA48F9 /* CP_1117.TXT */; };
+		55F19B422B52225D00BA48F9 /* CP_773.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AEB2B52222900BA48F9 /* CP_773.TXT */; };
+		55F19B432B52225D00BA48F9 /* CP_1270.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AEC2B52222900BA48F9 /* CP_1270.TXT */; };
+		55F19B442B52225D00BA48F9 /* CP_851.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AED2B52222900BA48F9 /* CP_851.TXT */; };
+		55F19B452B52225D00BA48F9 /* CP_853.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AEE2B52222900BA48F9 /* CP_853.TXT */; };
+		55F19B472B52228500BA48F9 /* DECOMPOSITION.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B122B52222900BA48F9 /* DECOMPOSITION.TXT */; };
+		55F19B482B52228500BA48F9 /* CAPITAL_SMALL.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B132B52222900BA48F9 /* CAPITAL_SMALL.TXT */; };
+		55F19B492B52228500BA48F9 /* MAIN.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B142B52222900BA48F9 /* MAIN.TXT */; };
+		55F19B4A2B52228500BA48F9 /* ASCII.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B162B52222900BA48F9 /* ASCII.TXT */; };
+		55F19B4B2B52228500BA48F9 /* CP_30006.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B0D2B52222900BA48F9 /* CP_30006.TXT */; };
+		55F19B4C2B52228500BA48F9 /* CP_30000.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B0E2B52222900BA48F9 /* CP_30000.TXT */; };
+		55F19B4D2B52228500BA48F9 /* CP_30034.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B102B52222900BA48F9 /* CP_30034.TXT */; };
+		55F19B4E2B52228500BA48F9 /* CP_865.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF02B52222900BA48F9 /* CP_865.TXT */; };
+		55F19B4F2B52228500BA48F9 /* CP_737.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF12B52222900BA48F9 /* CP_737.TXT */; };
+		55F19B502B52228500BA48F9 /* CP_864.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF22B52222900BA48F9 /* CP_864.TXT */; };
+		55F19B512B52228500BA48F9 /* CP_866.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF32B52222900BA48F9 /* CP_866.TXT */; };
+		55F19B522B52228500BA48F9 /* CP_863.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF42B52222900BA48F9 /* CP_863.TXT */; };
+		55F19B532B52228500BA48F9 /* CP_862.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF52B52222900BA48F9 /* CP_862.TXT */; };
+		55F19B542B52228500BA48F9 /* CP_860.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF62B52222900BA48F9 /* CP_860.TXT */; };
+		55F19B552B52228500BA48F9 /* CP_874.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF72B52222900BA48F9 /* CP_874.TXT */; };
+		55F19B562B52228500BA48F9 /* CP_861.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF82B52222900BA48F9 /* CP_861.TXT */; };
+		55F19B572B52228500BA48F9 /* CP_1256.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AF92B52222900BA48F9 /* CP_1256.TXT */; };
+		55F19B582B52228500BA48F9 /* CP_437.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFA2B52222900BA48F9 /* CP_437.TXT */; };
+		55F19B592B52228500BA48F9 /* CP_1257.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFB2B52222900BA48F9 /* CP_1257.TXT */; };
+		55F19B5A2B52228500BA48F9 /* CP_1255.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFC2B52222900BA48F9 /* CP_1255.TXT */; };
+		55F19B5B2B52228500BA48F9 /* CP_1254.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFD2B52222900BA48F9 /* CP_1254.TXT */; };
+		55F19B5C2B52228500BA48F9 /* CP_1250.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFE2B52222900BA48F9 /* CP_1250.TXT */; };
+		55F19B5D2B52228500BA48F9 /* CP_1251.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AFF2B52222900BA48F9 /* CP_1251.TXT */; };
+		55F19B5E2B52228500BA48F9 /* CP_1253.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B002B52222900BA48F9 /* CP_1253.TXT */; };
+		55F19B5F2B52228500BA48F9 /* CP_1252.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B022B52222900BA48F9 /* CP_1252.TXT */; };
+		55F19B602B52228500BA48F9 /* CP_775.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B032B52222900BA48F9 /* CP_775.TXT */; };
+		55F19B612B52228500BA48F9 /* CP_1258.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B042B52222900BA48F9 /* CP_1258.TXT */; };
+		55F19B622B52228500BA48F9 /* CP_850.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B052B52222900BA48F9 /* CP_850.TXT */; };
+		55F19B632B52228500BA48F9 /* CP_852.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B072B52222900BA48F9 /* CP_852.TXT */; };
+		55F19B642B52228500BA48F9 /* CP_856.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B082B52222900BA48F9 /* CP_856.TXT */; };
+		55F19B652B52228500BA48F9 /* CP_857.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B092B52222900BA48F9 /* CP_857.TXT */; };
+		55F19B662B52228500BA48F9 /* CP_869.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B0A2B52222900BA48F9 /* CP_869.TXT */; };
+		55F19B672B52228500BA48F9 /* CP_855.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B0B2B52222900BA48F9 /* CP_855.TXT */; };
+		55F19B682B52228500BA48F9 /* CP_899.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE02B52222900BA48F9 /* CP_899.TXT */; };
+		55F19B692B52228500BA48F9 /* CP_720.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE12B52222900BA48F9 /* CP_720.TXT */; };
+		55F19B6A2B52228500BA48F9 /* CP_708.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE22B52222900BA48F9 /* CP_708.TXT */; };
+		55F19B6B2B52228500BA48F9 /* CP_1169.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE32B52222900BA48F9 /* CP_1169.TXT */; };
+		55F19B6C2B52228500BA48F9 /* CP_3021.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE42B52222900BA48F9 /* CP_3021.TXT */; };
+		55F19B6D2B52228500BA48F9 /* CP_778.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE52B52222900BA48F9 /* CP_778.TXT */; };
+		55F19B6E2B52228500BA48F9 /* CP_3848.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE62B52222900BA48F9 /* CP_3848.TXT */; };
+		55F19B6F2B52228500BA48F9 /* CP_777.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE82B52222900BA48F9 /* CP_777.TXT */; };
+		55F19B702B52228500BA48F9 /* CP_776.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AE92B52222900BA48F9 /* CP_776.TXT */; };
+		55F19B712B52228500BA48F9 /* CP_1117.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AEA2B52222900BA48F9 /* CP_1117.TXT */; };
+		55F19B722B52228500BA48F9 /* CP_773.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AEB2B52222900BA48F9 /* CP_773.TXT */; };
+		55F19B732B52228500BA48F9 /* CP_1270.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AEC2B52222900BA48F9 /* CP_1270.TXT */; };
+		55F19B742B52228500BA48F9 /* CP_851.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AED2B52222900BA48F9 /* CP_851.TXT */; };
+		55F19B752B52228500BA48F9 /* CP_853.TXT in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19AEE2B52222900BA48F9 /* CP_853.TXT */; };
+		55F19B762B5222AD00BA48F9 /* license.txt in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B062B52222900BA48F9 /* license.txt */; };
+		55F19B772B5222B300BA48F9 /* license.txt in Copy Mappings */ = {isa = PBXBuildFile; fileRef = 55F19B062B52222900BA48F9 /* license.txt */; };
 		55F4A93D256315FD00410099 /* program_ls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55F4A93B256315FD00410099 /* program_ls.cpp */; };
 		55F4A93E256315FD00410099 /* program_ls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55F4A93B256315FD00410099 /* program_ls.cpp */; };
 		55F643F925F41DF5009E1800 /* rwqueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55F643EF25F41DF5009E1800 /* rwqueue.cpp */; };
@@ -1346,6 +1442,122 @@
 			name = "Copy CD Programs";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55F19ADE2B5221F900BA48F9 /* Copy Mappings */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = mapping;
+			dstSubfolderSpec = 7;
+			files = (
+				55F19B772B5222B300BA48F9 /* license.txt in Copy Mappings */,
+				55F19B1E2B52225D00BA48F9 /* CP_865.TXT in Copy Mappings */,
+				55F19B1F2B52225D00BA48F9 /* CP_737.TXT in Copy Mappings */,
+				55F19B202B52225D00BA48F9 /* CP_864.TXT in Copy Mappings */,
+				55F19B212B52225D00BA48F9 /* CP_866.TXT in Copy Mappings */,
+				55F19B222B52225D00BA48F9 /* CP_863.TXT in Copy Mappings */,
+				55F19B232B52225D00BA48F9 /* CP_862.TXT in Copy Mappings */,
+				55F19B242B52225D00BA48F9 /* CP_860.TXT in Copy Mappings */,
+				55F19B252B52225D00BA48F9 /* CP_874.TXT in Copy Mappings */,
+				55F19B262B52225D00BA48F9 /* CP_861.TXT in Copy Mappings */,
+				55F19B272B52225D00BA48F9 /* CP_1256.TXT in Copy Mappings */,
+				55F19B282B52225D00BA48F9 /* CP_437.TXT in Copy Mappings */,
+				55F19B292B52225D00BA48F9 /* CP_1257.TXT in Copy Mappings */,
+				55F19B2A2B52225D00BA48F9 /* CP_1255.TXT in Copy Mappings */,
+				55F19B2B2B52225D00BA48F9 /* CP_1254.TXT in Copy Mappings */,
+				55F19B2C2B52225D00BA48F9 /* CP_1250.TXT in Copy Mappings */,
+				55F19B2D2B52225D00BA48F9 /* CP_1251.TXT in Copy Mappings */,
+				55F19B2E2B52225D00BA48F9 /* CP_1253.TXT in Copy Mappings */,
+				55F19B2F2B52225D00BA48F9 /* CP_1252.TXT in Copy Mappings */,
+				55F19B302B52225D00BA48F9 /* CP_775.TXT in Copy Mappings */,
+				55F19B312B52225D00BA48F9 /* CP_1258.TXT in Copy Mappings */,
+				55F19B322B52225D00BA48F9 /* CP_850.TXT in Copy Mappings */,
+				55F19B332B52225D00BA48F9 /* CP_852.TXT in Copy Mappings */,
+				55F19B342B52225D00BA48F9 /* CP_856.TXT in Copy Mappings */,
+				55F19B352B52225D00BA48F9 /* CP_857.TXT in Copy Mappings */,
+				55F19B362B52225D00BA48F9 /* CP_869.TXT in Copy Mappings */,
+				55F19B372B52225D00BA48F9 /* CP_855.TXT in Copy Mappings */,
+				55F19B382B52225D00BA48F9 /* CP_899.TXT in Copy Mappings */,
+				55F19B392B52225D00BA48F9 /* CP_720.TXT in Copy Mappings */,
+				55F19B3A2B52225D00BA48F9 /* CP_708.TXT in Copy Mappings */,
+				55F19B3B2B52225D00BA48F9 /* CP_1169.TXT in Copy Mappings */,
+				55F19B3C2B52225D00BA48F9 /* CP_3021.TXT in Copy Mappings */,
+				55F19B3D2B52225D00BA48F9 /* CP_778.TXT in Copy Mappings */,
+				55F19B3E2B52225D00BA48F9 /* CP_3848.TXT in Copy Mappings */,
+				55F19B3F2B52225D00BA48F9 /* CP_777.TXT in Copy Mappings */,
+				55F19B402B52225D00BA48F9 /* CP_776.TXT in Copy Mappings */,
+				55F19B412B52225D00BA48F9 /* CP_1117.TXT in Copy Mappings */,
+				55F19B422B52225D00BA48F9 /* CP_773.TXT in Copy Mappings */,
+				55F19B432B52225D00BA48F9 /* CP_1270.TXT in Copy Mappings */,
+				55F19B442B52225D00BA48F9 /* CP_851.TXT in Copy Mappings */,
+				55F19B452B52225D00BA48F9 /* CP_853.TXT in Copy Mappings */,
+				55F19B172B52224000BA48F9 /* DECOMPOSITION.TXT in Copy Mappings */,
+				55F19B182B52224000BA48F9 /* CAPITAL_SMALL.TXT in Copy Mappings */,
+				55F19B192B52224000BA48F9 /* MAIN.TXT in Copy Mappings */,
+				55F19B1A2B52224000BA48F9 /* ASCII.TXT in Copy Mappings */,
+				55F19B1B2B52224000BA48F9 /* CP_30006.TXT in Copy Mappings */,
+				55F19B1C2B52224000BA48F9 /* CP_30000.TXT in Copy Mappings */,
+				55F19B1D2B52224000BA48F9 /* CP_30034.TXT in Copy Mappings */,
+			);
+			name = "Copy Mappings";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55F19B462B52226D00BA48F9 /* Copy Mappings */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = mapping;
+			dstSubfolderSpec = 7;
+			files = (
+				55F19B762B5222AD00BA48F9 /* license.txt in Copy Mappings */,
+				55F19B472B52228500BA48F9 /* DECOMPOSITION.TXT in Copy Mappings */,
+				55F19B482B52228500BA48F9 /* CAPITAL_SMALL.TXT in Copy Mappings */,
+				55F19B492B52228500BA48F9 /* MAIN.TXT in Copy Mappings */,
+				55F19B4A2B52228500BA48F9 /* ASCII.TXT in Copy Mappings */,
+				55F19B4B2B52228500BA48F9 /* CP_30006.TXT in Copy Mappings */,
+				55F19B4C2B52228500BA48F9 /* CP_30000.TXT in Copy Mappings */,
+				55F19B4D2B52228500BA48F9 /* CP_30034.TXT in Copy Mappings */,
+				55F19B4E2B52228500BA48F9 /* CP_865.TXT in Copy Mappings */,
+				55F19B4F2B52228500BA48F9 /* CP_737.TXT in Copy Mappings */,
+				55F19B502B52228500BA48F9 /* CP_864.TXT in Copy Mappings */,
+				55F19B512B52228500BA48F9 /* CP_866.TXT in Copy Mappings */,
+				55F19B522B52228500BA48F9 /* CP_863.TXT in Copy Mappings */,
+				55F19B532B52228500BA48F9 /* CP_862.TXT in Copy Mappings */,
+				55F19B542B52228500BA48F9 /* CP_860.TXT in Copy Mappings */,
+				55F19B552B52228500BA48F9 /* CP_874.TXT in Copy Mappings */,
+				55F19B562B52228500BA48F9 /* CP_861.TXT in Copy Mappings */,
+				55F19B572B52228500BA48F9 /* CP_1256.TXT in Copy Mappings */,
+				55F19B582B52228500BA48F9 /* CP_437.TXT in Copy Mappings */,
+				55F19B592B52228500BA48F9 /* CP_1257.TXT in Copy Mappings */,
+				55F19B5A2B52228500BA48F9 /* CP_1255.TXT in Copy Mappings */,
+				55F19B5B2B52228500BA48F9 /* CP_1254.TXT in Copy Mappings */,
+				55F19B5C2B52228500BA48F9 /* CP_1250.TXT in Copy Mappings */,
+				55F19B5D2B52228500BA48F9 /* CP_1251.TXT in Copy Mappings */,
+				55F19B5E2B52228500BA48F9 /* CP_1253.TXT in Copy Mappings */,
+				55F19B5F2B52228500BA48F9 /* CP_1252.TXT in Copy Mappings */,
+				55F19B602B52228500BA48F9 /* CP_775.TXT in Copy Mappings */,
+				55F19B612B52228500BA48F9 /* CP_1258.TXT in Copy Mappings */,
+				55F19B622B52228500BA48F9 /* CP_850.TXT in Copy Mappings */,
+				55F19B632B52228500BA48F9 /* CP_852.TXT in Copy Mappings */,
+				55F19B642B52228500BA48F9 /* CP_856.TXT in Copy Mappings */,
+				55F19B652B52228500BA48F9 /* CP_857.TXT in Copy Mappings */,
+				55F19B662B52228500BA48F9 /* CP_869.TXT in Copy Mappings */,
+				55F19B672B52228500BA48F9 /* CP_855.TXT in Copy Mappings */,
+				55F19B682B52228500BA48F9 /* CP_899.TXT in Copy Mappings */,
+				55F19B692B52228500BA48F9 /* CP_720.TXT in Copy Mappings */,
+				55F19B6A2B52228500BA48F9 /* CP_708.TXT in Copy Mappings */,
+				55F19B6B2B52228500BA48F9 /* CP_1169.TXT in Copy Mappings */,
+				55F19B6C2B52228500BA48F9 /* CP_3021.TXT in Copy Mappings */,
+				55F19B6D2B52228500BA48F9 /* CP_778.TXT in Copy Mappings */,
+				55F19B6E2B52228500BA48F9 /* CP_3848.TXT in Copy Mappings */,
+				55F19B6F2B52228500BA48F9 /* CP_777.TXT in Copy Mappings */,
+				55F19B702B52228500BA48F9 /* CP_776.TXT in Copy Mappings */,
+				55F19B712B52228500BA48F9 /* CP_1117.TXT in Copy Mappings */,
+				55F19B722B52228500BA48F9 /* CP_773.TXT in Copy Mappings */,
+				55F19B732B52228500BA48F9 /* CP_1270.TXT in Copy Mappings */,
+				55F19B742B52228500BA48F9 /* CP_851.TXT in Copy Mappings */,
+				55F19B752B52228500BA48F9 /* CP_853.TXT in Copy Mappings */,
+			);
+			name = "Copy Mappings";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9F2D316515B8233800FAE848 /* Copy Bundled Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1455,7 +1667,7 @@
 		555747FA208FA8030045E635 /* saa1099.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = saa1099.h; sourceTree = "<group>"; };
 		5563E57E239EF7CD007A1600 /* ADBSwiftHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBSwiftHelpers.swift; sourceTree = "<group>"; };
 		5565757423568DED003489A6 /* risc_x64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = risc_x64.h; sourceTree = "<group>"; };
-		556839072AD92AB600FDD2CE /* translations */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = translations; path = "DOSBox-Staging/contrib/resources/translations"; sourceTree = SOURCE_ROOT; };
+		556839072AD92AB600FDD2CE /* translations */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = translations; path = "DOSBox-Staging/contrib/resources/translations"; sourceTree = SOURCE_ROOT; };
 		556839112ADB353700FDD2CE /* libIir_boxer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIir_boxer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5568391F2ADB35B900FDD2CE /* Butterworth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Butterworth.h; sourceTree = "<group>"; };
 		556839202ADB35B900FDD2CE /* MathSupplement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathSupplement.h; sourceTree = "<group>"; };
@@ -2329,6 +2541,54 @@
 		55F0B76B26ABFEE80077E58C /* version.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = version.cc; sourceTree = "<group>"; };
 		55F0B79A26ABFF670077E58C /* program_choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = program_choice.h; sourceTree = "<group>"; };
 		55F0B79B26ABFF680077E58C /* program_choice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program_choice.cpp; sourceTree = "<group>"; };
+		55F19AE02B52222900BA48F9 /* CP_899.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_899.TXT; sourceTree = "<group>"; };
+		55F19AE12B52222900BA48F9 /* CP_720.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_720.TXT; sourceTree = "<group>"; };
+		55F19AE22B52222900BA48F9 /* CP_708.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_708.TXT; sourceTree = "<group>"; };
+		55F19AE32B52222900BA48F9 /* CP_1169.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1169.TXT; sourceTree = "<group>"; };
+		55F19AE42B52222900BA48F9 /* CP_3021.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_3021.TXT; sourceTree = "<group>"; };
+		55F19AE52B52222900BA48F9 /* CP_778.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_778.TXT; sourceTree = "<group>"; };
+		55F19AE62B52222900BA48F9 /* CP_3848.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_3848.TXT; sourceTree = "<group>"; };
+		55F19AE82B52222900BA48F9 /* CP_777.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_777.TXT; sourceTree = "<group>"; };
+		55F19AE92B52222900BA48F9 /* CP_776.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_776.TXT; sourceTree = "<group>"; };
+		55F19AEA2B52222900BA48F9 /* CP_1117.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1117.TXT; sourceTree = "<group>"; };
+		55F19AEB2B52222900BA48F9 /* CP_773.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_773.TXT; sourceTree = "<group>"; };
+		55F19AEC2B52222900BA48F9 /* CP_1270.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1270.TXT; sourceTree = "<group>"; };
+		55F19AED2B52222900BA48F9 /* CP_851.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_851.TXT; sourceTree = "<group>"; };
+		55F19AEE2B52222900BA48F9 /* CP_853.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_853.TXT; sourceTree = "<group>"; };
+		55F19AF02B52222900BA48F9 /* CP_865.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_865.TXT; sourceTree = "<group>"; };
+		55F19AF12B52222900BA48F9 /* CP_737.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_737.TXT; sourceTree = "<group>"; };
+		55F19AF22B52222900BA48F9 /* CP_864.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_864.TXT; sourceTree = "<group>"; };
+		55F19AF32B52222900BA48F9 /* CP_866.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_866.TXT; sourceTree = "<group>"; };
+		55F19AF42B52222900BA48F9 /* CP_863.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_863.TXT; sourceTree = "<group>"; };
+		55F19AF52B52222900BA48F9 /* CP_862.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_862.TXT; sourceTree = "<group>"; };
+		55F19AF62B52222900BA48F9 /* CP_860.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_860.TXT; sourceTree = "<group>"; };
+		55F19AF72B52222900BA48F9 /* CP_874.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_874.TXT; sourceTree = "<group>"; };
+		55F19AF82B52222900BA48F9 /* CP_861.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_861.TXT; sourceTree = "<group>"; };
+		55F19AF92B52222900BA48F9 /* CP_1256.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1256.TXT; sourceTree = "<group>"; };
+		55F19AFA2B52222900BA48F9 /* CP_437.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_437.TXT; sourceTree = "<group>"; };
+		55F19AFB2B52222900BA48F9 /* CP_1257.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1257.TXT; sourceTree = "<group>"; };
+		55F19AFC2B52222900BA48F9 /* CP_1255.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1255.TXT; sourceTree = "<group>"; };
+		55F19AFD2B52222900BA48F9 /* CP_1254.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1254.TXT; sourceTree = "<group>"; };
+		55F19AFE2B52222900BA48F9 /* CP_1250.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1250.TXT; sourceTree = "<group>"; };
+		55F19AFF2B52222900BA48F9 /* CP_1251.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1251.TXT; sourceTree = "<group>"; };
+		55F19B002B52222900BA48F9 /* CP_1253.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1253.TXT; sourceTree = "<group>"; };
+		55F19B022B52222900BA48F9 /* CP_1252.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1252.TXT; sourceTree = "<group>"; };
+		55F19B032B52222900BA48F9 /* CP_775.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_775.TXT; sourceTree = "<group>"; };
+		55F19B042B52222900BA48F9 /* CP_1258.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_1258.TXT; sourceTree = "<group>"; };
+		55F19B052B52222900BA48F9 /* CP_850.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_850.TXT; sourceTree = "<group>"; };
+		55F19B062B52222900BA48F9 /* license.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		55F19B072B52222900BA48F9 /* CP_852.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_852.TXT; sourceTree = "<group>"; };
+		55F19B082B52222900BA48F9 /* CP_856.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_856.TXT; sourceTree = "<group>"; };
+		55F19B092B52222900BA48F9 /* CP_857.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_857.TXT; sourceTree = "<group>"; };
+		55F19B0A2B52222900BA48F9 /* CP_869.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_869.TXT; sourceTree = "<group>"; };
+		55F19B0B2B52222900BA48F9 /* CP_855.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_855.TXT; sourceTree = "<group>"; };
+		55F19B0D2B52222900BA48F9 /* CP_30006.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_30006.TXT; sourceTree = "<group>"; };
+		55F19B0E2B52222900BA48F9 /* CP_30000.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_30000.TXT; sourceTree = "<group>"; };
+		55F19B102B52222900BA48F9 /* CP_30034.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CP_30034.TXT; sourceTree = "<group>"; };
+		55F19B122B52222900BA48F9 /* DECOMPOSITION.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = DECOMPOSITION.TXT; sourceTree = "<group>"; };
+		55F19B132B52222900BA48F9 /* CAPITAL_SMALL.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CAPITAL_SMALL.TXT; sourceTree = "<group>"; };
+		55F19B142B52222900BA48F9 /* MAIN.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = MAIN.TXT; sourceTree = "<group>"; };
+		55F19B162B52222900BA48F9 /* ASCII.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = ASCII.TXT; sourceTree = "<group>"; };
 		55F4A9302563157300410099 /* gui_msgs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gui_msgs.h; sourceTree = "<group>"; };
 		55F4A93A2563159F00410099 /* string_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = string_utils.h; sourceTree = "<group>"; };
 		55F4A93B256315FD00410099 /* program_ls.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program_ls.cpp; sourceTree = "<group>"; };
@@ -3431,6 +3691,10 @@
 				9FFAFE2E10DE343F00728BAC /* Configurations */,
 				9FCBB5FE10A6DDBD00C28B09 /* DOS Toolkit */,
 				556839072AD92AB600FDD2CE /* translations */,
+				55F19B112B52222900BA48F9 /* mapping */,
+				55F19B0C2B52222900BA48F9 /* mapping-freedos.org */,
+				55F19AEF2B52222900BA48F9 /* mapping-unicode.org */,
+				55F19ADF2B52222900BA48F9 /* mapping-wikipedia.org */,
 				9FBC34390F56C5AC001811F2 /* Images */,
 				9FCBB2CB10A61C6D00C28B09 /* Sounds */,
 				9F496E4C108EEDF700282261 /* XIBs */,
@@ -4641,6 +4905,86 @@
 			);
 			path = resample;
 			sourceTree = "<group>";
+		};
+		55F19ADF2B52222900BA48F9 /* mapping-wikipedia.org */ = {
+			isa = PBXGroup;
+			children = (
+				55F19AE22B52222900BA48F9 /* CP_708.TXT */,
+				55F19AE12B52222900BA48F9 /* CP_720.TXT */,
+				55F19AEB2B52222900BA48F9 /* CP_773.TXT */,
+				55F19AE92B52222900BA48F9 /* CP_776.TXT */,
+				55F19AE82B52222900BA48F9 /* CP_777.TXT */,
+				55F19AE52B52222900BA48F9 /* CP_778.TXT */,
+				55F19AED2B52222900BA48F9 /* CP_851.TXT */,
+				55F19AEE2B52222900BA48F9 /* CP_853.TXT */,
+				55F19AE02B52222900BA48F9 /* CP_899.TXT */,
+				55F19AEA2B52222900BA48F9 /* CP_1117.TXT */,
+				55F19AE32B52222900BA48F9 /* CP_1169.TXT */,
+				55F19AEC2B52222900BA48F9 /* CP_1270.TXT */,
+				55F19AE42B52222900BA48F9 /* CP_3021.TXT */,
+				55F19AE62B52222900BA48F9 /* CP_3848.TXT */,
+			);
+			name = "mapping-wikipedia.org";
+			path = "DOSBox-Staging/contrib/resources/mapping-wikipedia.org";
+			sourceTree = SOURCE_ROOT;
+		};
+		55F19AEF2B52222900BA48F9 /* mapping-unicode.org */ = {
+			isa = PBXGroup;
+			children = (
+				55F19AFA2B52222900BA48F9 /* CP_437.TXT */,
+				55F19AF12B52222900BA48F9 /* CP_737.TXT */,
+				55F19B032B52222900BA48F9 /* CP_775.TXT */,
+				55F19B052B52222900BA48F9 /* CP_850.TXT */,
+				55F19B072B52222900BA48F9 /* CP_852.TXT */,
+				55F19B0B2B52222900BA48F9 /* CP_855.TXT */,
+				55F19B082B52222900BA48F9 /* CP_856.TXT */,
+				55F19B092B52222900BA48F9 /* CP_857.TXT */,
+				55F19AF62B52222900BA48F9 /* CP_860.TXT */,
+				55F19AF82B52222900BA48F9 /* CP_861.TXT */,
+				55F19AF52B52222900BA48F9 /* CP_862.TXT */,
+				55F19AF42B52222900BA48F9 /* CP_863.TXT */,
+				55F19AF22B52222900BA48F9 /* CP_864.TXT */,
+				55F19AF02B52222900BA48F9 /* CP_865.TXT */,
+				55F19AF32B52222900BA48F9 /* CP_866.TXT */,
+				55F19B0A2B52222900BA48F9 /* CP_869.TXT */,
+				55F19AF72B52222900BA48F9 /* CP_874.TXT */,
+				55F19AFE2B52222900BA48F9 /* CP_1250.TXT */,
+				55F19AFF2B52222900BA48F9 /* CP_1251.TXT */,
+				55F19B022B52222900BA48F9 /* CP_1252.TXT */,
+				55F19B002B52222900BA48F9 /* CP_1253.TXT */,
+				55F19AFD2B52222900BA48F9 /* CP_1254.TXT */,
+				55F19AFC2B52222900BA48F9 /* CP_1255.TXT */,
+				55F19AF92B52222900BA48F9 /* CP_1256.TXT */,
+				55F19AFB2B52222900BA48F9 /* CP_1257.TXT */,
+				55F19B042B52222900BA48F9 /* CP_1258.TXT */,
+				55F19B062B52222900BA48F9 /* license.txt */,
+			);
+			name = "mapping-unicode.org";
+			path = "DOSBox-Staging/contrib/resources/mapping-unicode.org";
+			sourceTree = SOURCE_ROOT;
+		};
+		55F19B0C2B52222900BA48F9 /* mapping-freedos.org */ = {
+			isa = PBXGroup;
+			children = (
+				55F19B0E2B52222900BA48F9 /* CP_30000.TXT */,
+				55F19B0D2B52222900BA48F9 /* CP_30006.TXT */,
+				55F19B102B52222900BA48F9 /* CP_30034.TXT */,
+			);
+			name = "mapping-freedos.org";
+			path = "DOSBox-Staging/contrib/resources/mapping-freedos.org";
+			sourceTree = SOURCE_ROOT;
+		};
+		55F19B112B52222900BA48F9 /* mapping */ = {
+			isa = PBXGroup;
+			children = (
+				55F19B162B52222900BA48F9 /* ASCII.TXT */,
+				55F19B132B52222900BA48F9 /* CAPITAL_SMALL.TXT */,
+				55F19B122B52222900BA48F9 /* DECOMPOSITION.TXT */,
+				55F19B142B52222900BA48F9 /* MAIN.TXT */,
+			);
+			name = mapping;
+			path = "DOSBox-Staging/contrib/resources/mapping";
+			sourceTree = SOURCE_ROOT;
 		};
 		9F010D1616CEC7C800B9CE0A /* Windows */ = {
 			isa = PBXGroup;
@@ -6229,6 +6573,7 @@
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				9FBC3D5E0F56EA69001811F2 /* Copy Bundled Frameworks */,
 				55998D1C25F626E800581095 /* Copy CD Programs */,
+				55F19ADE2B5221F900BA48F9 /* Copy Mappings */,
 			);
 			buildRules = (
 			);
@@ -6263,6 +6608,7 @@
 				9F2D30D415B8233800FAE848 /* Resources */,
 				9F2D314E15B8233800FAE848 /* Frameworks */,
 				9F2D316515B8233800FAE848 /* Copy Bundled Frameworks */,
+				55F19B462B52226D00BA48F9 /* Copy Mappings */,
 			);
 			buildRules = (
 			);
