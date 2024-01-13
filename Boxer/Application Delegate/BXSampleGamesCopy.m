@@ -7,7 +7,7 @@
 
 
 #import "BXSampleGamesCopy.h"
-#import "BXCoverArt.h"
+#import "Boxer-Swift.h"
 
 @implementation BXSampleGamesCopy
 
@@ -58,9 +58,9 @@
                 NSImage *image = [[NSImage alloc] initWithContentsOfURL: iconURL];
                 if (image)
                 {
-                    NSImage *iconForGame = [BXCoverArt coverArtWithImage: image];
+                    NSImage *iconForGame = [CoverArt coverArtWithImage: image];
                     
-                    [[NSWorkspace sharedWorkspace] setIcon: iconForGame forFile: destinationURL.path options: 0];
+                    [[NSWorkspace sharedWorkspace] setIcon: iconForGame forFile: destinationURL.path options: NSExcludeQuickDrawElementsIconCreationOption];
                 }
             }
         }

@@ -24,9 +24,9 @@ typedef NS_ENUM(NSInteger, BXDADiskOperationStatus)
 	BXDADiskOperationSucceeded = 1
 };
 
-BOOL _mountSynchronously(DASessionRef, DADiskRef disk, CFURLRef path, DADiskUnmountOptions options);
-BOOL _unmountSynchronously(DASessionRef session, DADiskRef disk, DADiskMountOptions options);
-void _mountCallback(DADiskRef disk, DADissenterRef dissenter, void *status);
+static BOOL _mountSynchronously(DASessionRef, DADiskRef disk, CFURLRef path, DADiskUnmountOptions options);
+static BOOL _unmountSynchronously(DASessionRef session, DADiskRef disk, DADiskMountOptions options);
+static void _mountCallback(DADiskRef disk, DADissenterRef dissenter, void *status);
 
 #pragma mark -
 #pragma mark Implementation

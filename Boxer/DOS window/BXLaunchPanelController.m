@@ -460,20 +460,29 @@
 
 + (NSImage *) _headingIconForDriveType: (BXDriveType)type
 {
-    NSString *iconName;
+    NSImage *icon;
     switch (type)
     {
         case BXDriveCDROM:
-            iconName = @"CDROMTemplate";
+            if (@available(macOS 13.0, *)) {
+                icon = [NSImage imageWithSystemSymbolName: @"opticaldisc.fill" accessibilityDescription: nil];
+            } else {
+                icon = [NSImage imageNamed: @"CDROMTemplate"];
+            }
             break;
         case BXDriveFloppyDisk:
-            iconName = @"DisketteTemplate";
+            icon = [NSImage imageNamed: @"DisketteTemplate"];
             break;
         default:
-            iconName = @"HardDiskTemplate";
+            if (@available(macOS 11.0, *)) {
+                icon = [NSImage imageWithSystemSymbolName: @"internaldrive.fill" accessibilityDescription: nil];
+            } else {
+                icon = [NSImage imageNamed: @"HardDiskTemplate"];
+            }
+            break;
     }
     
-    return [NSImage imageNamed: iconName];
+    return icon;
 }
 
 - (NSDictionary *) _listItemForDrive: (BXDrive *)drive

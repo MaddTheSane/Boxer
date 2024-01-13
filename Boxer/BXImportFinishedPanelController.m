@@ -10,9 +10,9 @@
 #import "BXAppController.h"
 #import "BXImportWindowController.h"
 #import "BXImportSession.h"
-#import "BXCoverArt.h"
 #import "BXGamebox.h"
 #import "NSWorkspace+ADBFileTypes.h"
+#import "Boxer-Swift.h"
 
 @implementation BXImportFinishedPanelController
 
@@ -28,7 +28,7 @@
 	{
 		if (icon)
 		{
-            self.controller.document.representedIcon = [BXCoverArt coverArtWithImage: icon];
+            self.controller.document.representedIcon = [CoverArt coverArtWithImage: icon];
 		}
 		else
 		{

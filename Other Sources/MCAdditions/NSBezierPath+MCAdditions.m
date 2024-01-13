@@ -7,6 +7,10 @@
 
 #import "NSBezierPath+MCAdditions.h"
 
+#ifndef MAC_OS_VERSION_14_0
+#define MAC_OS_VERSION_14_0 140000
+#endif
+
 static void CGPathCallback(void *info, const CGPathElement *element)
 {
 	NSBezierPath *path = (__bridge NSBezierPath *)info;
@@ -98,6 +102,7 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 	NSBezierPath *path = [self copy];
 	CGContextRef context = [[NSGraphicsContext currentContext] CGContext];
 	CGPathRef pathRef;
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_VERSION_14_0
 	if (@available(macOS 14.0, *)) @autoreleasepool {
 		pathRef = path.CGPath;
 		// match the old memory management.
@@ -105,6 +110,9 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 	} else {
 		pathRef = [path createCGPath];
 	}
+#else
+	pathRef = [path createCGPath];
+#endif
 	
 	CGContextSaveGState(context);
 		
@@ -115,11 +123,15 @@ static void CGPathCallback(void *info, const CGPathElement *element)
 	CGPathRef strokedPathRef = CGContextCopyPath(context);
 	CGContextBeginPath(context);
 	NSBezierPath *strokedPath;
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_VERSION_14_0
 	if (@available(macOS 14.0, *)) {
 		strokedPath = [NSBezierPath bezierPathWithCGPath:strokedPathRef];
 	} else {
 		strokedPath = [NSBezierPath ourBezierPathWithCGPath:strokedPathRef];
 	}
+#else
+	strokedPath = [NSBezierPath ourBezierPathWithCGPath:strokedPathRef];
+#endif
 	
 	CGContextRestoreGState(context);
 	

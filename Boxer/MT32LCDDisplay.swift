@@ -17,37 +17,37 @@ import Cocoa
 class MT32LCDDisplay : NSTextField {
     /// The image containing glyph data for the pixel font.
     private var pixelFont: NSImage {
-        return NSImage(resource: ImageResource.MT32ScreenDisplay.mt32LCDFontTemplate)
+        return NSImage(named: "MT32ScreenDisplay/MT32LCDFontTemplate")!
     }
     
     /// The mask image to use for the LCD pixel grid.
     /// This will be drawn in for 20 character places.
     private var pixelGrid: NSImage {
-        return NSImage(resource: ImageResource.MT32ScreenDisplay.mt32LCDGridTemplate)
+        return NSImage(named: "MT32ScreenDisplay/MT32LCDGridTemplate")!
     }
     
     /// The background color of the field.
     private var screenColor: NSColor {
-        return NSColor(resource: ColorResource.MT32ScreenDisplay.screen)
+        return NSColor(named: "MT32ScreenDisplay/screenColor")!
     }
 
     private var frameColor: NSColor {
-        return NSColor(resource: ColorResource.MT32ScreenDisplay.frame)
+        return NSColor(named: "MT32ScreenDisplay/frameColor")!
     }
 
     /// The background color of the LCD pixel grid.
     private var gridColor: NSColor {
-        return NSColor(resource: ColorResource.MT32ScreenDisplay.grid)
+        return NSColor(named: "MT32ScreenDisplay/gridColor")!
     }
 
     /// The colour of lit LCD pixels upon the grid.
     private var pixelColor: NSColor {
-        return NSColor(resource: ColorResource.MT32ScreenDisplay.pixel)
+        return NSColor(named: "MT32ScreenDisplay/pixelColor")!
     }
     
     /// The inner shadow of the screen.
     private var innerShadow: NSShadow {
-        return NSShadow(blurRadius: 10, offset: NSSize(width: 0, height: -2.0), color: NSColor(resource: ColorResource.MT32ScreenDisplay.innerShadow))
+        return NSShadow(blurRadius: 10, offset: NSSize(width: 0, height: -2.0), color: NSColor(named: "MT32ScreenDisplay/innerShadowColor")!)
     }
     
     /// The lighting effects applied on top of the screen.

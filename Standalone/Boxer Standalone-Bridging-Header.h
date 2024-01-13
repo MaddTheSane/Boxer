@@ -11,3 +11,4 @@
 #import "NSBezierPath+MCAdditions.h"
 #import "ADBGeometry.h"
 #import "BXMIDIDevice.h"
+#import "BXBootlegCoverArt.h"

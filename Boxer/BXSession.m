@@ -39,6 +39,8 @@
 
 #import "ADBAppKitVersionHelpers.h"
 
+#import "Boxer-Swift.h"
+
 
 #pragma mark -
 #pragma mark Constants
@@ -192,9 +194,9 @@ NSString * const BXGameImportedNotificationType     = @"BXGameImported";
     
 	switch (medium)
 	{
-		case BXCDROMMedium:         coverArtClass = [BXJewelCase class];	break;
-		case BX525DisketteMedium:	coverArtClass = [BX525Diskette class];	break;
-		default:                    coverArtClass = [BX35Diskette class];	break;
+		case BXCDROMMedium:         coverArtClass = [JewelCase class];		break;
+		case BX525DisketteMedium:	coverArtClass = [Diskette525 class];	break;
+		default:                    coverArtClass = [Diskette35 class];		break;
 	}
 	NSString *iconTitle = gamebox.gameName;
 	NSImage *icon = [coverArtClass coverArtWithTitle: iconTitle];

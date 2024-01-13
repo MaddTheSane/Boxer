@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// BXBootlegCoverArt is similar to BXCoverArt, but creates generic cover art based on a title string
 /// rather than a box image. Implementing classes create artwork to resemble bootleg floppy disks and
 /// CD-ROM jewel-cases.
@@ -22,8 +24,8 @@
 /// Draws the source image as cover art into the specified frame in the current graphics context.
 - (void) drawInRect: (NSRect)frame;
 
-/// Returns a cover art image representation from the instance's title rendered at the specified size.
-- (NSImageRep *) representationForSize: (NSSize)iconSize;
+/// Returns a cover art image representation from the instance's title rendered at the specified size and scale.
+- (NSImageRep *) representationForSize: (NSSize)iconSize scale: (CGFloat)scale;
 
 /// Returns a cover art image rendered from the instance's title, suitable for use as an OS X icon.
 - (NSImage *) coverArt;
@@ -33,41 +35,4 @@
 
 @end
 
-
-@interface BXJewelCase : NSObject <BXBootlegCoverArt>
-
-/// The game title to display on this cover art.
-@property (copy, nonatomic) NSString *title;
-
-/// Returns the font family name used for printing the title.
-@property (class, readonly, copy) NSString *fontName;
-
-/// Returns the color used for printing the title.
-@property (class, readonly, copy) NSColor *textColor;
-
-/// Returns the line height used for printing the title.
-+ (CGFloat) lineHeightForSize:	(NSSize)size;
-/// Returns the font size used for printing the title.
-+ (CGFloat) fontSizeForSize:	(NSSize)size;
-
-/// Returns a dictionary of \c NSAttributedString text attributes used for printing the title.
-/// This is a collection of the return values of the methods above.
-+ (NSDictionary<NSAttributedStringKey,id> *) textAttributesForSize: (NSSize)size;
-
-/// Returns the image to render underneath the text.
-+ (NSImage *) baseLayerForSize: (NSSize)size;
-
-/// Returns the image to render over the top of the text.
-+ (NSImage *) topLayerForSize: (NSSize)size;
-
-/// Returns the region of the image in which to print the text.
-/// Will be \c NSZeroRect if text should not be printed at this size.
-+ (NSRect) textRegionForRect: (NSRect)rect;
-
-@end
-
-@interface BX35Diskette : BXJewelCase
-@end
-
-@interface BX525Diskette : BXJewelCase
-@end
+NS_ASSUME_NONNULL_END

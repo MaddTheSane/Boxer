@@ -7,9 +7,9 @@
 
 
 #import "BXCoverArtWell.h"
-#import "BXCoverArt.h"
 #import "ADBGeometry.h"
 #import "NSShadow+ADBShadowExtensions.h"
+#import "Boxer-Swift.h"
 
 @implementation BXCoverArtWell
 
@@ -24,7 +24,7 @@
 	NSSize dropZoneSize	= NSMakeSize(384, 512);
 
 	//Allow enough room for the standard drop shadow we'd be rendering onto the real box art
-	NSShadow *dropShadow = [BXCoverArt dropShadowForSize: containingFrame.size];
+	NSShadow *dropShadow = [CoverArt dropShadowForSize: containingFrame.size];
 	
 	NSSize availableSize = NSMakeSize(
 		containingFrame.size.width	- [dropShadow shadowBlurRadius] * 2,
@@ -128,8 +128,8 @@
 	NSBezierPath *arrow		= [[self class] arrowForFrame: [dropZone bounds] withSize: arrowSize];
 
 	NSColor *borderColor	= [NSColor lightGrayColor];
-	NSImage *shine			= [BXCoverArt shineForSize:			frame.size];
-	NSShadow *dropShadow	= [BXCoverArt dropShadowForSize:	frame.size]; 
+	NSImage *shine			= [CoverArt shineForSize:       frame.size];
+	NSShadow *dropShadow	= [CoverArt dropShadowForSize:  frame.size];
 	
 
 	//Isolate the current context on a transparent layer of its own,
@@ -159,7 +159,7 @@
 {
 	if (newImage)
 	{
-		[super setImage: [BXCoverArt coverArtWithImage: newImage]];
+		[super setImage: [CoverArt coverArtWithImage: newImage]];
 	}
 	else [super setImage: nil];
 	
