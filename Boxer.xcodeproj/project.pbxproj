@@ -232,7 +232,6 @@
 		55683ABB2ADB5C9900FDD2CE /* opus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55144FF624BE81E00002CE28 /* opus.cpp */; };
 		55683ABC2ADB5C9900FDD2CE /* opus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55144FF624BE81E00002CE28 /* opus.cpp */; };
 		55683B082ADB5D9800FDD2CE /* opusfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 55683AD52ADB5D9800FDD2CE /* opusfile.h */; };
-		55683B0F2ADB5D9800FDD2CE /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 55683AEC2ADB5D9800FDD2CE /* Makefile */; };
 		55683B102ADB5D9800FDD2CE /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 55683B002ADB5D9800FDD2CE /* internal.h */; };
 		55683B112ADB5D9800FDD2CE /* opusfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 55683B012ADB5D9800FDD2CE /* opusfile.c */; };
 		55683B122ADB5D9800FDD2CE /* info.c in Sources */ = {isa = PBXBuildFile; fileRef = 55683B022ADB5D9800FDD2CE /* info.c */; };
@@ -6648,7 +6647,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				55683B112ADB5D9800FDD2CE /* opusfile.c in Sources */,
-				55683B0F2ADB5D9800FDD2CE /* Makefile in Sources */,
 				55683B122ADB5D9800FDD2CE /* info.c in Sources */,
 				55683B172ADB5D9800FDD2CE /* stream.c in Sources */,
 				55683B152ADB5D9800FDD2CE /* http.c in Sources */,
