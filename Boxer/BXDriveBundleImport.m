@@ -126,15 +126,18 @@ NSString * const BXDriveBundleErrorDomain = @"BXDriveBundleErrorDomain";
 	if (self.isCancelled) return;
     
     //Work out what to do with the related file paths we've parsed from the cue file
-    NSURL *baseURL = sourceURL.URLByDeletingLastPathComponent;
     NSMutableDictionary *revisedPaths = [NSMutableDictionary dictionaryWithCapacity: numRelatedPaths];
     
     for (NSString *fromPath in relatedPaths)
     {
-        //Rewrite Windows-style paths
-        NSString *sanitisedFromPath = [fromPath stringByReplacingOccurrencesOfString: @"\\" withString: @"/"];
+        NSError *pathError = nil;
+        NSURL *fromURL      = [ADBBinCueImage resourceURLForRawPath: fromPath inCueAtURL: sourceURL error: &pathError];
+        if (!fromURL)
+        {
+            self.error = pathError;
+            return;
+        }
         
-        NSURL *fromURL      = [baseURL URLByAppendingPathComponent: sanitisedFromPath];
         NSString *fromName	= fromURL.lastPathComponent;
         NSURL *toURL        = [destinationURL URLByAppendingPathComponent: fromName];
         

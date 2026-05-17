@@ -38,7 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
     
 /// Returns an array of the track files specified in the specified CUE,
 /// as absolute OS X filesystem URLs resolved relative to the CUE's location.
+/// Returns @c nil and populates @c outError if any resource resolves outside the CUE's folder.
 + (nullable NSArray<NSURL*> *) resourceURLsInCueAtURL: (NSURL *)cueURL error: (out NSError **)outError;
+
+/// Returns a track file URL resolved relative to the specified CUE file.
+/// Returns @c nil and populates @c outError if the resource resolves outside the CUE's folder.
++ (nullable NSURL *) resourceURLForRawPath: (NSString *)rawPath inCueAtURL: (NSURL *)cueURL error: (out NSError **)outError;
 
 /// Returns the location of the binary image for the specified CUE file,
 /// as an absolute OS X filesystem URL resolved relative to the CUE's location.

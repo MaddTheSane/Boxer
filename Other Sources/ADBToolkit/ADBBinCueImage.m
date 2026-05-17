@@ -41,6 +41,26 @@ NSString * const ADBCueFileDescriptorSyntax = @"FILE\\s+(?:\"(.+)\"|(\\S+))\\s+[
 /// This is used as a sanity check by +isCueAtPath: to avoid scanning large files unnecessarily.
 #define ADBCueMaxFileSize 10240
 
+static BOOL ADBURLIsInDirectory(NSURL *URL, NSURL *directoryURL)
+{
+    NSString *path = URL.URLByStandardizingPath.URLByResolvingSymlinksInPath.path;
+    NSString *directoryPath = directoryURL.URLByStandardizingPath.URLByResolvingSymlinksInPath.path;
+
+    return [path isEqualToString: directoryPath] || [path hasPrefix: [directoryPath stringByAppendingString: @"/"]];
+}
+
+static NSError *ADBCueResourcePathError(NSURL *cueURL, NSString *rawPath)
+{
+    NSString *description = [NSString stringWithFormat: @"The CUE file “%@” refers to a resource outside its folder.", cueURL.lastPathComponent];
+    NSString *failureReason = [NSString stringWithFormat: @"The resource path “%@” does not resolve inside the CUE file's folder.", rawPath];
+
+    return [NSError errorWithDomain: NSCocoaErrorDomain
+                               code: NSFileReadInvalidFileNameError
+                           userInfo: @{ NSLocalizedDescriptionKey: description,
+                                        NSLocalizedFailureReasonErrorKey: failureReason,
+                                        NSURLErrorKey: cueURL }];
+}
+
 
 @implementation ADBBinCueImage
 
@@ -70,6 +90,28 @@ NSString * const ADBCueFileDescriptorSyntax = @"FILE\\s+(?:\"(.+)\"|(\\S+))\\s+[
 	return paths;
 }
 
++ (NSURL *) resourceURLForRawPath: (NSString *)rawPath inCueAtURL: (NSURL *)cueURL error: (out NSError **)outError
+{
+    NSURL *baseURL = cueURL.URLByDeletingLastPathComponent.URLByStandardizingPath;
+
+    //Rewrite Windows-style paths
+    NSString *normalizedPath = [rawPath stringByReplacingOccurrencesOfString: @"\\" withString: @"/"];
+
+    //Form an absolute path with all ../ components resolved.
+    NSURL *resourceURL = [baseURL URLByAppendingPathComponent: normalizedPath].URLByStandardizingPath;
+
+    if (!ADBURLIsInDirectory(resourceURL, baseURL))
+    {
+        if (outError)
+        {
+            *outError = ADBCueResourcePathError(cueURL, rawPath);
+        }
+        return nil;
+    }
+
+    return resourceURL;
+}
+
 + (NSArray *) resourceURLsInCueAtURL: (NSURL *)cueURL error: (out NSError **)outError
 {
     NSString *cueContents = [[NSString alloc] initWithContentsOfURL: cueURL
@@ -81,20 +123,28 @@ NSString * const ADBCueFileDescriptorSyntax = @"FILE\\s+(?:\"(.+)\"|(\\S+))\\s+[
     
     NSArray *rawPaths = [self rawPathsInCueContents: cueContents];
     
-    //The URL relative to which we will resolve the paths in the CUE
-    NSURL *baseURL = cueURL.URLByDeletingLastPathComponent;
-    
     NSMutableArray *resolvedURLs = [NSMutableArray arrayWithCapacity: rawPaths.count];
+    NSError *resourceError = nil;
     for (NSString *rawPath in rawPaths)
     @autoreleasepool {
-        //Rewrite Windows-style paths
-        NSString *normalizedPath = [rawPath stringByReplacingOccurrencesOfString: @"\\" withString: @"/"];
-        
-        //Form an absolute path with all ../ components resolved.
-        NSURL *resourceURL = [baseURL URLByAppendingPathComponent: normalizedPath].URLByStandardizingPath;
+        NSURL *resourceURL = [self resourceURLForRawPath: rawPath inCueAtURL: cueURL error: &resourceError];
+        if (!resourceURL)
+        {
+            break;
+        }
         
         [resolvedURLs addObject: resourceURL];
     }
+
+    if (resourceError)
+    {
+        if (outError)
+        {
+            *outError = resourceError;
+        }
+        return nil;
+    }
+
     return resolvedURLs;
 }
 
