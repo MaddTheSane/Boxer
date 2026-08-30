@@ -116,6 +116,16 @@ NSString * const BXGameboxErrorDomain = @"BXGameboxErrorDomain";
     [self.undoDelegate removeAllUndoActionsForClient: self];
 }
 
+- (NSURL *) resourceURL
+{
+    return super.resourceURL ?: self.bundleURL;
+}
+
+- (NSString *) resourcePath
+{
+    return super.resourcePath ?: self.bundlePath;
+}
+
 #pragma mark - Launchers
 
 - (void) _populateLaunchers

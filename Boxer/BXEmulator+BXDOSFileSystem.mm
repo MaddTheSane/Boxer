@@ -1107,7 +1107,7 @@ void MSCDEX_SetCDInterface(int intNr, int forceCD);
 	//If the path couldn't be encoded, don't attempt to go further
 	if (!drivePath) return nil;
 	
-	fatDrive *drive = new fatDrive(drivePath, 0, 0, 0, 0, 0);
+	fatDrive *drive = new fatDrive(drivePath, 0, 0, 0, 0, 0, false);
 	if (!drive || !drive->created_successfully)
     {
         delete drive;

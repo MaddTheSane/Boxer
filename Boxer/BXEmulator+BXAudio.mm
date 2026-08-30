@@ -178,14 +178,14 @@ void _renderMIDIOutput(Bitu numFrames)
 {
     //We need to look up the corresponding channel for this because DOSBox's
     //mixer doesn't pass any context with its callbacks.
-    MixerChannel *channel = MIXER_FindChannel(BXMIDIChannelName);
+    MixerChannel *channel = MIXER_FindChannel(BXMIDIChannelName).get();
     if (channel) [[BXEmulator currentEmulator] _renderMIDIOutputToChannel: channel frames: numFrames];
 }
 
 
 - (MixerChannel *) _MIDIMixerChannel
 {
-    return MIXER_FindChannel(BXMIDIChannelName);
+    return MIXER_FindChannel(BXMIDIChannelName).get();
 }
 
 - (MixerChannel *) _addMIDIMixerChannelWithSampleRate: (NSUInteger)sampleRate
@@ -198,7 +198,7 @@ void _renderMIDIOutput(Bitu numFrames)
     }
     else
     {
-        channel = MIXER_AddChannel(_renderMIDIOutput, sampleRate, BXMIDIChannelName);
+        channel = MIXER_AddChannel(_renderMIDIOutput, sampleRate, BXMIDIChannelName).get();
     }
     channel->Enable(true);
     return channel;
@@ -210,7 +210,7 @@ void _renderMIDIOutput(Bitu numFrames)
     if (channel)
     {
         channel->Enable(false);
-        MIXER_DelChannel(channel);
+        MIXER_DelChannel(BXMIDIChannelName);
     }
 }
 

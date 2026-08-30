@@ -696,23 +696,99 @@
 
 @implementation BXBaseAppController (BXErrorReporting)
 
+- (NSURL *) _writeIssueWithTitle: (NSString *)title
+                             body: (NSString *)body
+                   revealInFinder: (BOOL)revealInFinder
+{
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSURL *applicationSupportURL = [manager URLsForDirectory: NSApplicationSupportDirectory
+                                                   inDomains: NSUserDomainMask].firstObject;
+    if (!applicationSupportURL)
+    {
+        NSBeep();
+        return nil;
+    }
+    
+    NSURL *reportFolderURL = [[applicationSupportURL URLByAppendingPathComponent: @"Boxer"
+                                                                     isDirectory: YES] URLByAppendingPathComponent: @"Crash Dumps"
+                                                                                                        isDirectory: YES];
+    
+    NSError *folderError = nil;
+    if (![manager createDirectoryAtURL: reportFolderURL
+           withIntermediateDirectories: YES
+                            attributes: nil
+                                 error: &folderError])
+    {
+        NSLog(@"Could not create Boxer report folder at %@: %@", reportFolderURL.path, folderError);
+        NSBeep();
+        return nil;
+    }
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [NSLocale localeWithLocaleIdentifier: @"en_US_POSIX"];
+    dateFormatter.dateFormat = @"yyyy-MM-dd HH.mm.ss";
+    
+    NSString *reportTitle = title.length ? title : @"Boxer Error Report";
+    NSMutableCharacterSet *allowedCharacters = [NSMutableCharacterSet alphanumericCharacterSet];
+    [allowedCharacters addCharactersInString: @"-_. "];
+    
+    NSMutableString *safeTitle = [NSMutableString stringWithCapacity: reportTitle.length];
+    for (NSUInteger index = 0; index < reportTitle.length; index++)
+    {
+        unichar character = [reportTitle characterAtIndex: index];
+        if ([allowedCharacters characterIsMember: character])
+            [safeTitle appendFormat: @"%C", character];
+        else
+            [safeTitle appendString: @"-"];
+    }
+    
+    NSString *fileName = [NSString stringWithFormat: @"Boxer Error Report %@ - %@.md",
+                                                    [dateFormatter stringFromDate: [NSDate date]],
+                                                    safeTitle];
+    NSURL *reportURL = [reportFolderURL URLByAppendingPathComponent: fileName];
+    
+    NSMutableString *report = [NSMutableString string];
+    [report appendFormat: @"# %@\n\n", reportTitle];
+    [report appendFormat: @"Created: %@\n\n", [NSDate date]];
+    if (body.length)
+        [report appendString: body];
+    else
+        [report appendString: @"No additional error details were available.\n"];
+    
+    NSError *writeError = nil;
+    if (![report writeToURL: reportURL
+                 atomically: YES
+                   encoding: NSUTF8StringEncoding
+                      error: &writeError])
+    {
+        NSLog(@"Could not write Boxer error report to %@: %@", reportURL.path, writeError);
+        NSBeep();
+        return nil;
+    }
+    
+    NSLog(@"Saved Boxer error report to %@", reportURL.path);
+    if (revealInFinder)
+    {
+        [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs: @[reportURL]];
+    }
+    
+    return reportURL;
+}
+
 - (void) reportIssueWithTitle: (NSString *)title body: (NSString *)body
 {
-    NSString *issueURLString = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"BugReportURL"];
-    NSAssert(issueURLString.length, @"No issue URL found in Info.plist for key %@", @"BugReportURL");
-    
-    if (issueURLString.length)
-    {
-        NSString *encodedTitle  = (title) ? [title stringByAddingPercentEncodingWithAllowedCharacters: NSCharacterSet.URLQueryAllowedCharacterSet] : @"";
-        NSString *encodedBody   = (body) ? [body stringByAddingPercentEncodingWithAllowedCharacters: NSCharacterSet.URLQueryAllowedCharacterSet] : @"";
-        
-        NSString *completeURLString = [NSString stringWithFormat: @"%@?title=%@&body=%@", issueURLString, encodedTitle, encodedBody];
-		[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: completeURLString]];
-    }
+    [self _writeIssueWithTitle: title body: body revealInFinder: YES];
 }
 
 - (void) reportIssueForError: (NSError *)error
                    inSession: (BXSession *)session
+{
+    [self writeIssueForError: error inSession: session revealInFinder: YES];
+}
+
+- (NSURL *) writeIssueForError: (NSError *)error
+                     inSession: (BXSession *)session
+                 revealInFinder: (BOOL)revealInFinder
 {
     if ([error matchesDomain: BXEmulatorErrorDomain code: BXEmulatorUnrecoverableError])
     {
@@ -741,21 +817,28 @@
         
         //----
         [issueBody appendString: @"## Error details ##\n\n"];
-        [issueBody appendFormat: @"**Error message:** %@\n", exception.reason];
+        [issueBody appendFormat: @"**Error message:** %@\n", exception.reason ?: error.localizedDescription ?: @"Unknown error"];
         
         if (function)
         {
             [issueBody appendFormat: @"**In function:** `%@` (line %@)\n", function, lineNumber];
         }
         
-        [issueBody appendString: @"**Full stack trace:**\n\n"];
-        for (NSDictionary<ADBCallstackKeys, id> *description in exception.callStackDescriptions)
+        if (exception)
         {
-            NSString *libraryName   = [description objectForKey: ADBCallstackLibraryName];
-            NSString *funcName      = [description objectForKey: ADBCallstackHumanReadableFunctionName];
-            NSNumber *offset        = [description objectForKey: ADBCallstackSymbolOffset];
-            
-            [issueBody appendFormat: @"    %@ -- %@ (%@)\n", libraryName, funcName, offset];
+            [issueBody appendString: @"**Full stack trace:**\n\n"];
+            for (NSDictionary<ADBCallstackKeys, id> *description in exception.callStackDescriptions)
+            {
+                NSString *libraryName   = [description objectForKey: ADBCallstackLibraryName];
+                NSString *funcName      = [description objectForKey: ADBCallstackHumanReadableFunctionName];
+                NSNumber *offset        = [description objectForKey: ADBCallstackSymbolOffset];
+                
+                [issueBody appendFormat: @"    %@ -- %@ (%@)\n", libraryName, funcName, offset];
+            }
+        }
+        else
+        {
+            [issueBody appendString: @"**Full stack trace:** unavailable; the error did not include an exception object.\n"];
         }
         
         //----
@@ -782,12 +865,18 @@
             }
         }
         
-        [(BXBaseAppController *)[NSApp delegate] reportIssueWithTitle: issueTitle body: issueBody];
+        NSURL *crashDumpURL = [error.userInfo objectForKey: @"crashDumpURL"];
+        if (crashDumpURL)
+        {
+            [issueBody appendFormat: @"\n\n## Local crash dump ##\n\n%@\n", crashDumpURL.path];
+        }
+        
+        return [(BXBaseAppController *)[NSApp delegate] _writeIssueWithTitle: issueTitle body: issueBody revealInFinder: revealInFinder];
     }
     //We don't yet have suitable formulations for other kinds of errors, so just open the issue page blank.
     else
     {
-        [(BXBaseAppController *)[NSApp delegate] reportIssueWithTitle: nil body: nil];
+        return [(BXBaseAppController *)[NSApp delegate] _writeIssueWithTitle: nil body: nil revealInFinder: revealInFinder];
     }
 }
 @end

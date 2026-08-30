@@ -162,19 +162,24 @@
 @end
 
 
-/// Top-level methods for reporting fatal errors to Boxer's error reporting page.
+/// Top-level methods for saving fatal error reports.
 @interface BXBaseAppController (BXErrorReporting)
 
-/// Opens an issue tracker page for a new issue, prefilling with optional issue data.
-/// @param title    If provided, the title field of the issue form will be prefilled with this string.
-/// @param body     If provided, the content field of the issue form will be prefilled with this string.
+/// Saves an error report file, prefilled with optional issue data.
+/// @param title    If provided, the title of the issue.
+/// @param body     If provided, the content of the issue report.
 - (void) reportIssueWithTitle: (NSString *)title
                          body: (NSString *)body;
 
-/// Opens an issue tracker page prefilled with the details of the specified error.
-/// @param error    The error whose details should be prefilled into the issue form.
-/// @param session  The session that triggered the error. Details of the session will be included in the issue text.
+/// Saves an error report file prefilled with the details of the specified error.
+/// @param error    The error whose details should be prefilled into the report.
+/// @param session  The session that triggered the error. Details of the session will be included in the report.
 - (void) reportIssueForError: (NSError *)error
                    inSession: (BXSession *)session;
+
+/// Saves an error report for the specified error and returns the file URL.
+- (NSURL *) writeIssueForError: (NSError *)error
+                     inSession: (BXSession *)session
+                 revealInFinder: (BOOL)revealInFinder;
 
 @end

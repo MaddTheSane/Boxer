@@ -122,6 +122,9 @@ extern ADBUserNotificationType const BXGameImportedNotificationType NS_SWIFT_NAM
 /// Called if DOSBox encounters an unrecoverable error and throws an exception.
 - (void) _reportEmulatorException: (NSException *)exception;
 
+/// Starts the emulator on a background thread and reports unrecoverable emulator exceptions on the main thread.
+- (void) _startEmulatorInBackground;
+
 
 /// Callback for close alert. Confirms document close when window is closed or application is shut down.
 - (void) _closeAlertDidEnd: (BXCloseAlert *)alert

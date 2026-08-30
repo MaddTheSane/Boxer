@@ -23,6 +23,24 @@
 		05F9A20124BAA7AA00969496 /* SDL2_net.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9A1FE24BAA64100969496 /* SDL2_net.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05F9A20224BAA7AB00969496 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0532FBF624BAA1A4008EAD86 /* SDL2.framework */; };
 		05F9A20324BAA7AB00969496 /* SDL2.framework in Copy Bundled Frameworks */ = {isa = PBXBuildFile; fileRef = 0532FBF624BAA1A4008EAD86 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0FFCA147303264D20076F2F5 /* ide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA146303264D20076F2F5 /* ide.cpp */; };
+		0FFCA148303264D20076F2F5 /* ide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA146303264D20076F2F5 /* ide.cpp */; };
+		0FFCA14A303265380076F2F5 /* program_serial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA149303265380076F2F5 /* program_serial.cpp */; };
+		0FFCA14B303265380076F2F5 /* program_serial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA149303265380076F2F5 /* program_serial.cpp */; };
+		0FFCA14F3032657E0076F2F5 /* program_placeholder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA14E3032657E0076F2F5 /* program_placeholder.cpp */; };
+		0FFCA1503032657E0076F2F5 /* program_placeholder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA14E3032657E0076F2F5 /* program_placeholder.cpp */; };
+		0FFCA152303265A60076F2F5 /* ethernet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA151303265A60076F2F5 /* ethernet.cpp */; };
+		0FFCA153303265A60076F2F5 /* ethernet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA151303265A60076F2F5 /* ethernet.cpp */; };
+		0FFCA160303265EF0076F2F5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0FFCA15C303265EF0076F2F5 /* LICENSE */; };
+		0FFCA163303265EF0076F2F5 /* fs_std_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA15B303265EF0076F2F5 /* fs_std_impl.cpp */; };
+		0FFCA164303265EF0076F2F5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0FFCA15C303265EF0076F2F5 /* LICENSE */; };
+		0FFCA167303265EF0076F2F5 /* fs_std_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA15B303265EF0076F2F5 /* fs_std_impl.cpp */; };
+		0FFCA16F303266110076F2F5 /* LICENSE.MIT in Resources */ = {isa = PBXBuildFile; fileRef = 0FFCA168303266110076F2F5 /* LICENSE.MIT */; };
+		0FFCA172303266110076F2F5 /* LICENSE.WTFPLv2 in Resources */ = {isa = PBXBuildFile; fileRef = 0FFCA169303266110076F2F5 /* LICENSE.WTFPLv2 */; };
+		0FFCA173303266110076F2F5 /* whereami.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA16D303266110076F2F5 /* whereami.c */; };
+		0FFCA174303266110076F2F5 /* LICENSE.MIT in Resources */ = {isa = PBXBuildFile; fileRef = 0FFCA168303266110076F2F5 /* LICENSE.MIT */; };
+		0FFCA177303266110076F2F5 /* LICENSE.WTFPLv2 in Resources */ = {isa = PBXBuildFile; fileRef = 0FFCA169303266110076F2F5 /* LICENSE.WTFPLv2 */; };
+		0FFCA178303266110076F2F5 /* whereami.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCA16D303266110076F2F5 /* whereami.c */; };
 		5514500A24BE81E00002CE28 /* opl3.c in Sources */ = {isa = PBXBuildFile; fileRef = 55144FEC24BE81DF0002CE28 /* opl3.c */; };
 		5514500B24BE81E00002CE28 /* opl3.c in Sources */ = {isa = PBXBuildFile; fileRef = 55144FEC24BE81DF0002CE28 /* opl3.c */; };
 		5514500C24BE81E00002CE28 /* vorbis.c in Sources */ = {isa = PBXBuildFile; fileRef = 55144FEE24BE81E00002CE28 /* vorbis.c */; };
@@ -1044,6 +1062,23 @@
 		05E6BA7324BA26FD00BAAD2D /* BXMetalRenderingView+BXImageCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BXMetalRenderingView+BXImageCapture.m"; sourceTree = "<group>"; };
 		05E6BA7524BA279000BAAD2D /* BXMetalRenderingView+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BXMetalRenderingView+Private.h"; sourceTree = "<group>"; };
 		05F9A1FE24BAA64100969496 /* SDL2_net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2_net.framework; sourceTree = "<group>"; };
+		0FFCA146303264D20076F2F5 /* ide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ide.cpp; sourceTree = "<group>"; };
+		0FFCA149303265380076F2F5 /* program_serial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = program_serial.cpp; sourceTree = "<group>"; };
+		0FFCA14C3032653F0076F2F5 /* program_serial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = program_serial.h; sourceTree = "<group>"; };
+		0FFCA14D3032657E0076F2F5 /* program_placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = program_placeholder.h; sourceTree = "<group>"; };
+		0FFCA14E3032657E0076F2F5 /* program_placeholder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = program_placeholder.cpp; sourceTree = "<group>"; };
+		0FFCA151303265A60076F2F5 /* ethernet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ethernet.cpp; sourceTree = "<group>"; };
+		0FFCA155303265EF0076F2F5 /* filesystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = filesystem.hpp; sourceTree = "<group>"; };
+		0FFCA156303265EF0076F2F5 /* fs_fwd.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fs_fwd.hpp; sourceTree = "<group>"; };
+		0FFCA157303265EF0076F2F5 /* fs_impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fs_impl.hpp; sourceTree = "<group>"; };
+		0FFCA158303265EF0076F2F5 /* fs_std.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fs_std.hpp; sourceTree = "<group>"; };
+		0FFCA159303265EF0076F2F5 /* fs_std_fwd.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fs_std_fwd.hpp; sourceTree = "<group>"; };
+		0FFCA15B303265EF0076F2F5 /* fs_std_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fs_std_impl.cpp; sourceTree = "<group>"; };
+		0FFCA15C303265EF0076F2F5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0FFCA168303266110076F2F5 /* LICENSE.MIT */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.MIT; sourceTree = "<group>"; };
+		0FFCA169303266110076F2F5 /* LICENSE.WTFPLv2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.WTFPLv2; sourceTree = "<group>"; };
+		0FFCA16C303266110076F2F5 /* whereami.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = whereami.h; sourceTree = "<group>"; };
+		0FFCA16D303266110076F2F5 /* whereami.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = whereami.c; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -2141,6 +2176,39 @@
 			sourceTree = "<group>";
 			usesTabs = 0;
 		};
+		0FFCA15A303265EF0076F2F5 /* ghc */ = {
+			isa = PBXGroup;
+			children = (
+				0FFCA155303265EF0076F2F5 /* filesystem.hpp */,
+				0FFCA156303265EF0076F2F5 /* fs_fwd.hpp */,
+				0FFCA157303265EF0076F2F5 /* fs_impl.hpp */,
+				0FFCA158303265EF0076F2F5 /* fs_std.hpp */,
+				0FFCA159303265EF0076F2F5 /* fs_std_fwd.hpp */,
+			);
+			path = ghc;
+			sourceTree = "<group>";
+		};
+		0FFCA15F303265EF0076F2F5 /* ghc */ = {
+			isa = PBXGroup;
+			children = (
+				0FFCA15A303265EF0076F2F5 /* ghc */,
+				0FFCA15B303265EF0076F2F5 /* fs_std_impl.cpp */,
+				0FFCA15C303265EF0076F2F5 /* LICENSE */,
+			);
+			path = ghc;
+			sourceTree = "<group>";
+		};
+		0FFCA16E303266110076F2F5 /* whereami */ = {
+			isa = PBXGroup;
+			children = (
+				0FFCA168303266110076F2F5 /* LICENSE.MIT */,
+				0FFCA169303266110076F2F5 /* LICENSE.WTFPLv2 */,
+				0FFCA16C303266110076F2F5 /* whereami.h */,
+				0FFCA16D303266110076F2F5 /* whereami.c */,
+			);
+			path = whereami;
+			sourceTree = "<group>";
+		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3109,7 +3177,11 @@
 				55DB14F927EDA2C70024AE9E /* program_mount.cpp */,
 				55DB14EA27EDA2C60024AE9E /* program_mount.h */,
 				55DB14E827EDA2C60024AE9E /* program_rescan.cpp */,
+				0FFCA14D3032657E0076F2F5 /* program_placeholder.h */,
+				0FFCA14E3032657E0076F2F5 /* program_placeholder.cpp */,
 				55DB14FB27EDA2C70024AE9E /* program_rescan.h */,
+				0FFCA14C3032653F0076F2F5 /* program_serial.h */,
+				0FFCA149303265380076F2F5 /* program_serial.cpp */,
 			);
 			path = dos;
 			sourceTree = "<group>";
@@ -3170,6 +3242,7 @@
 				9F77212512B38C4400072AE8 /* hardware.cpp */,
 				9F77212612B38C4400072AE8 /* iohandler.cpp */,
 				55DB14DC27EDA2020024AE9E /* iohandler_containers.cpp */,
+				0FFCA146303264D20076F2F5 /* ide.cpp */,
 				9F77212712B38C4400072AE8 /* ipx.cpp */,
 				9F77212812B38C4400072AE8 /* ipxserver.cpp */,
 				9F77212912B38C4400072AE8 /* joystick.cpp */,
@@ -3254,12 +3327,14 @@
 		9F77216412B38C4400072AE8 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				0FFCA15F303265EF0076F2F5 /* ghc */,
 				55F0B73C26ABFEE80077E58C /* residfp */,
 				55144FED24BE81E00002CE28 /* decoders */,
 				55144FE924BE81DF0002CE28 /* nuked */,
 				5514500424BE81E00002CE28 /* ppscale */,
 				9F77216512B38C4400072AE8 /* gui_tk */,
 				9F77216812B38C4400072AE8 /* zmbv */,
+				0FFCA16E303266110076F2F5 /* whereami */,
 			);
 			path = libs;
 			sourceTree = "<group>";
@@ -3287,6 +3362,7 @@
 			children = (
 				9F77216C12B38C4400072AE8 /* cross.cpp */,
 				55540E252545604400B88BE3 /* fs_utils_posix.cpp */,
+				0FFCA151303265A60076F2F5 /* ethernet.cpp */,
 				9F77216D12B38C4400072AE8 /* messages.cpp */,
 				55844D0F26C70E7700AA5924 /* pacer.cpp */,
 				9F77216E12B38C4400072AE8 /* programs.cpp */,
@@ -3980,6 +4056,7 @@
 				9FFE3EA81BE68DBA005332E0 /* Localizable.strings in Resources */,
 				9F4199E81BD416E400A2D165 /* LauncherItem.xib in Resources */,
 				55635A432D35DEB700C70C0E /* Configuration.xcstrings in Resources */,
+				0FFCA160303265EF0076F2F5 /* LICENSE in Resources */,
 				9F4199F21BD416E400A2D165 /* ProgramPanel.xib in Resources */,
 				9F12F97C144875F400FC9645 /* DummyCD.iso in Resources */,
 				9F4199F31BD416E400A2D165 /* ImportTipsPanel.xib in Resources */,
@@ -3991,6 +4068,8 @@
 				058BC52A24C27BA10078C244 /* SliderCell.xib in Resources */,
 				9F4199F01BD416E400A2D165 /* Preferences.xib in Resources */,
 				9F4199E31BD416E400A2D165 /* PrintStatusPanel.xib in Resources */,
+				0FFCA174303266110076F2F5 /* LICENSE.MIT in Resources */,
+				0FFCA177303266110076F2F5 /* LICENSE.WTFPLv2 in Resources */,
 				9FE32383157A9559004492E8 /* Shaders in Resources */,
 				9F4199F51BD416E400A2D165 /* Welcome.xib in Resources */,
 				9F4199F11BD416E400A2D165 /* About.xib in Resources */,
@@ -4008,6 +4087,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2D30D615B8233800FAE848 /* LockClosing.aiff in Resources */,
+				0FFCA164303265EF0076F2F5 /* LICENSE in Resources */,
 				9FAA7EB01BE698ED00F4FCA6 /* Localizable.strings in Resources */,
 				55220E4824CFFFC900A6736A /* SliderCell.xib in Resources */,
 				9F2D30D715B8233800FAE848 /* LockOpening.aiff in Resources */,
@@ -4024,6 +4104,8 @@
 				9FCB7B2715B877E500CC7CC7 /* DOS Toolkit in Resources */,
 				9FCB7B2815B8782800CC7CC7 /* Bezel.xib in Resources */,
 				9F1E959A15BD88D700C3C6A0 /* UserDefaults.plist in Resources */,
+				0FFCA16F303266110076F2F5 /* LICENSE.MIT in Resources */,
+				0FFCA172303266110076F2F5 /* LICENSE.WTFPLv2 in Resources */,
 				55220E4624CFFFC900A6736A /* CheckboxCell.xib in Resources */,
 				9F1E959C15BD899500C3C6A0 /* GameDefaults.plist in Resources */,
 				9F7472D61BE7D96E00B9C9ED /* StandaloneAbout.xib in Resources */,
@@ -4102,6 +4184,7 @@
 				9FDAD87F10C182B3004EA7D0 /* BXCoverArtWell.m in Sources */,
 				9FD011BD10C2A02F00670CE1 /* BXGameboxPanelController.m in Sources */,
 				9F76D1B910CA9DFB00C3B081 /* NSWorkspace+ADBFileTypes.m in Sources */,
+				0FFCA14B303265380076F2F5 /* program_serial.cpp in Sources */,
 				9F76D45610CBE5C500C3B081 /* BXSession+BXDragDrop.m in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				9F44E5E410D17A4C0081B8D2 /* BXEmulator+BXPaste.mm in Sources */,
@@ -4170,6 +4253,7 @@
 				9F44500212AEC0FC00A2D405 /* BXSimpleDriveImport.m in Sources */,
 				5514502224BE81E00002CE28 /* ppscale.c in Sources */,
 				9F2120F813015653002AB1B7 /* BXShelfArt.m in Sources */,
+				0FFCA178303266110076F2F5 /* whereami.c in Sources */,
 				9F2120FE1301597E002AB1B7 /* NSImage+ADBSaveImages.m in Sources */,
 				9F2122EA1301BDE1002AB1B7 /* BXShelfAppearanceOperation.m in Sources */,
 				55DB14FE27EDA2C70024AE9E /* program_mount_common.cpp in Sources */,
@@ -4183,6 +4267,7 @@
 				55574801208FA8040045E635 /* ymf262.cpp in Sources */,
 				9FBAA878134A66C80092BF95 /* BXBinCueImageImport.m in Sources */,
 				9FF865CF134DAB5A001CE857 /* ADBTaskOperation.m in Sources */,
+				0FFCA152303265A60076F2F5 /* ethernet.cpp in Sources */,
 				9FDE341F1351DE26000DCE44 /* BXBlueprintBackgroundView.m in Sources */,
 				9FDE34341351DFD4000DCE44 /* BXImportTipsPanelController.m in Sources */,
 				9F731B2E136323D2005E564F /* ADBHIDMonitor.m in Sources */,
@@ -4206,6 +4291,7 @@
 				9FB446EB13D23BD900E69AF5 /* BXG25ControllerProfile.m in Sources */,
 				9FA0C9E313D24FF3000F6FCB /* DDHidUsage+ADBUsageExtensions.m in Sources */,
 				9FC2F84013D60FBD00BD4F6B /* BXDualActionControllerProfile.m in Sources */,
+				0FFCA1503032657E0076F2F5 /* program_placeholder.cpp in Sources */,
 				9F70277B13D706CC00606B4C /* BXBezelController.m in Sources */,
 				9F70278413D72D8100606B4C /* BXThemedLabel.m in Sources */,
 				9F8F482513DC74CA00C7E022 /* NSShadow+ADBShadowExtensions.m in Sources */,
@@ -4343,6 +4429,7 @@
 				55F0B79826ABFEE80077E58C /* version.cc in Sources */,
 				9F77219D12B38C4400072AE8 /* drives.cpp in Sources */,
 				9F77219E12B38C4400072AE8 /* dosbox.cpp in Sources */,
+				0FFCA163303265EF0076F2F5 /* fs_std_impl.cpp in Sources */,
 				55574803208FA8040045E635 /* fmopl.cpp in Sources */,
 				9F77219F12B38C4400072AE8 /* fpu.cpp in Sources */,
 				9F7721A112B38C4400072AE8 /* render.cpp in Sources */,
@@ -4387,6 +4474,7 @@
 				55A76C5E2B678C0700DEF246 /* URL+ADBAliasHelpers.swift in Sources */,
 				9F7721C712B38C4400072AE8 /* vga_draw.cpp in Sources */,
 				9F7721C812B38C4400072AE8 /* vga_gfx.cpp in Sources */,
+				0FFCA147303264D20076F2F5 /* ide.cpp in Sources */,
 				9F7721C912B38C4400072AE8 /* vga_memory.cpp in Sources */,
 				9F7721CA12B38C4400072AE8 /* vga_misc.cpp in Sources */,
 				55F0B77426ABFEE80077E58C /* EnvelopeGenerator.cpp in Sources */,
@@ -4517,6 +4605,7 @@
 				5514501F24BE81E00002CE28 /* flac.c in Sources */,
 				9F2D301815B8233800FAE848 /* BXInputController+BXKeyboardInput.m in Sources */,
 				9F2D301915B8233800FAE848 /* BXEmulatedJoystick.mm in Sources */,
+				0FFCA167303265EF0076F2F5 /* fs_std_impl.cpp in Sources */,
 				9F2D301A15B8233800FAE848 /* BXCHFlightstick.mm in Sources */,
 				9F2D301B15B8233800FAE848 /* callback.cpp in Sources */,
 				55F643FA25F41DF5009E1800 /* rwqueue.cpp in Sources */,
@@ -4573,6 +4662,7 @@
 				9F2D304A15B8233800FAE848 /* dbopl.cpp in Sources */,
 				9F2D304B15B8233800FAE848 /* disney.cpp in Sources */,
 				9F2D304C15B8233800FAE848 /* dma.cpp in Sources */,
+				0FFCA153303265A60076F2F5 /* ethernet.cpp in Sources */,
 				9F2D304D15B8233800FAE848 /* gameblaster.cpp in Sources */,
 				9F2D304E15B8233800FAE848 /* gus.cpp in Sources */,
 				9F2D304F15B8233800FAE848 /* hardware.cpp in Sources */,
@@ -4728,6 +4818,7 @@
 				9F98410315BEE64400B50CDA /* ADBShadowedFilesystem.m in Sources */,
 				9FB60E8F15C5552F00CD0D63 /* NSURL+ADBFilesystemHelpers.m in Sources */,
 				9FB60E9315C5643200CD0D63 /* NSError+ADBErrorHelpers.mm in Sources */,
+				0FFCA14A303265380076F2F5 /* program_serial.cpp in Sources */,
 				9F458D9D15D83B8C00DF9102 /* BXLaunchPanelController.m in Sources */,
 				9F458D9E15D83B9000DF9102 /* BXDOSWindowBackgroundView.m in Sources */,
 				9F57684A15DA27A300B50500 /* BXHUDSpinningProgressIndicator.m in Sources */,
@@ -4744,6 +4835,7 @@
 				9FD6AA1916314A5B002B774E /* printer_charmaps.cpp in Sources */,
 				9FD6AA1B16314A5B002B774E /* printer_redir.cpp in Sources */,
 				9FD6AA2116315278002B774E /* BXEmulatedPrinter.mm in Sources */,
+				0FFCA14F3032657E0076F2F5 /* program_placeholder.cpp in Sources */,
 				9F596503163D8D910094FD6B /* BXSession+BXPrinting.m in Sources */,
 				55F0B78526ABFEE80077E58C /* Filter6581.cpp in Sources */,
 				9FF982121646C7640080F763 /* BXPrintSession.m in Sources */,
@@ -4763,10 +4855,12 @@
 				9F80E80016DA3170001C3162 /* ADBFileHandle.m in Sources */,
 				9F693D5F16DD40DD00CCEA7C /* ADBEnumerationHelpers.m in Sources */,
 				9F3756B51A2228860060E131 /* BXStandaloneLaunchPanelController.m in Sources */,
+				0FFCA148303264D20076F2F5 /* ide.cpp in Sources */,
 				9F38B38C16DFB1960050AB15 /* ADBLocalFilesystem.m in Sources */,
 				9F1E8CDB16E16C0400F1C908 /* ADBScanOperation.m in Sources */,
 				9F1E8CDF16E16EB800F1C908 /* ADBMountableImage.m in Sources */,
 				55F0B79326ABFEE80077E58C /* Filter8580.cpp in Sources */,
+				0FFCA173303266110076F2F5 /* whereami.c in Sources */,
 				9FCA937D16FF37A000720B81 /* BXDocumentationPanelController.m in Sources */,
 				9FCA937E16FF38E700720B81 /* BXDocumentationBrowser.m in Sources */,
 				9F8B282B1709C4A100B31A14 /* ADBFilesystemBase.m in Sources */,
@@ -5138,11 +5232,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_SHORT_VERSION_STRING = 1.0;
 				CURRENT_PROJECT_VERSION = 20210308;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
@@ -5170,9 +5267,11 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = "2.0.0-alpha";
 				OTHER_CFLAGS = "-mstackrealign";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dtseto.boxer-standalone";
 				PRODUCT_NAME = "Boxer Standalone";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Standalone/Boxer Standalone-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Boxer-Swift.h";
 				SWIFT_VERSION = 5.0;
@@ -5185,11 +5284,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_SHORT_VERSION_STRING = 1.0;
 				CURRENT_PROJECT_VERSION = 20210308;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
@@ -5205,6 +5307,8 @@
 					"\"$(SRCROOT)/Frameworks/SDL2.framework/Headers\"",
 					"\"$(SRCROOT)/DOSBox-Staging/submodules/loguru\"",
 					"\"$(SRCROOT)/Vendor/OpenEmuShaders/Source/RendererPrivate\"",
+					"$(SRCROOT)/DOSBox-Staging/src/libs/loguru",
+					"$(SRCROOT)/DOSBox-Staging/src/libs/ghc",
 				);
 				INFOPLIST_FILE = "Standalone/Boxer Standalone-Info.plist";
 				LD_NO_PIE = YES;
@@ -5213,9 +5317,11 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = "2.0.0-alpha";
 				OTHER_CFLAGS = "-mstackrealign";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dtseto.boxer-standalone";
 				PRODUCT_NAME = "Boxer Standalone";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Standalone/Boxer Standalone-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Boxer-Swift.h";
 				SWIFT_VERSION = 5.0;
@@ -5231,11 +5337,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 20191017;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -5253,9 +5362,10 @@
 					"$(inherited)",
 				);
 				MARKETING_VERSION = 1.2.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone-bundler";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dtseto.boxer-standalone-bundler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				WRAPPER_EXTENSION = app;
 			};
@@ -5270,10 +5380,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 20191017;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -5286,9 +5399,10 @@
 					"$(inherited)",
 				);
 				MARKETING_VERSION = 1.2.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone-bundler";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dtseto.boxer-standalone-bundler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				WRAPPER_EXTENSION = app;
 			};
@@ -5319,8 +5433,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CURRENT_PROJECT_VERSION = 20120907.1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GHTQCRGWTR;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -5336,6 +5453,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -5348,16 +5466,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = boxer;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				CODE_SIGN_ENTITLEMENTS = Boxer/Boxer.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: David Seto (GHTQCRGWTR)";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "2.0.0-alpha+20210308";
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5379,16 +5500,19 @@
 					"\"$(SRCROOT)/Vendor/OpenEmuShaders/Source/RendererPrivate\"",
 				);
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_NO_PIE = YES;
 				"LD_NO_PIE[arch=arm64]" = NO;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = "2.0.0-alpha";
+				MARKETING_VERSION = "2.0.2-alpha";
 				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				OTHER_CFLAGS = "-mstackrealign";
-				PRODUCT_BUNDLE_IDENTIFIER = net.washboardabs.boxer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dtseto.boxer;
 				PRODUCT_NAME = Boxer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = YES;
 				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				SWIFT_OBJC_BRIDGING_HEADER = "Boxer/Boxer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -5399,17 +5523,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = boxer;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				CODE_SIGN_ENTITLEMENTS = Boxer/Boxer.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: David Seto (GHTQCRGWTR)";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "2.0.0-alpha+20210308";
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = NO;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
@@ -5426,18 +5553,23 @@
 					"\"$(SRCROOT)/Frameworks/SDL2.framework/Headers\"",
 					"\"$(SRCROOT)/DOSBox-Staging/submodules/loguru\"",
 					"\"$(SRCROOT)/Vendor/OpenEmuShaders/Source/RendererPrivate\"",
+					"$(SRCROOT)/DOSBox-Staging/src/libs/loguru",
+					"$(SRCROOT)/DOSBox-Staging/src/libs/ghc",
 				);
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_NO_PIE = YES;
 				"LD_NO_PIE[arch=arm64]" = NO;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = "2.0.0-alpha";
+				MARKETING_VERSION = "2.0.2-alpha";
 				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				OTHER_CFLAGS = "-mstackrealign";
-				PRODUCT_BUNDLE_IDENTIFIER = net.washboardabs.boxer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dtseto.boxer;
 				PRODUCT_NAME = Boxer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = NO;
 				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				SWIFT_OBJC_BRIDGING_HEADER = "Boxer/Boxer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -5469,8 +5601,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 20120907.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GHTQCRGWTR;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -5484,7 +5620,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dtseto.boxer;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;

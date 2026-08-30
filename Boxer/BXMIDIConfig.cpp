@@ -10,7 +10,7 @@
 #include "string_utils.h"
 
 
-static void mt32_init(MAYBE_UNUSED Section *secprop)
+static void mt32_init(Section * /*secprop*/)
 {}
 
 static void init_mt32_dosbox_settings(Section_prop &sec_prop)
@@ -61,7 +61,7 @@ static void init_mt32_dosbox_settings(Section_prop &sec_prop)
     Pint->Set_help("MT-32 reverb level");
 }
 
-void BXMIDIMT32_AddConfigSection(Config *conf)
+void BXMIDIMT32_AddConfigSection(const config_ptr_t &conf)
 {
     assert(conf);
     Section_prop *sec_prop = conf->AddSection_prop("mt32", &mt32_init);

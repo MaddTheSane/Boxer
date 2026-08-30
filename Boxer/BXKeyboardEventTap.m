@@ -104,7 +104,7 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
 
 + (BOOL) canCaptureKeyEvents
 {
-    return AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)@{(__bridge NSString*)kAXTrustedCheckOptionPrompt: @YES});
+    return AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)@{(__bridge NSString*)kAXTrustedCheckOptionPrompt: @NO});
 }
 
 - (BXKeyboardEventTapStatus) _reportedStatusOfEventTap
@@ -156,16 +156,22 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
 {
     @synchronized(self)
     {
-        //Captures keyup and keydown events. We use this for intercepting OS X hotkeys.
-        CGEventMask keyEvents = CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(kCGEventKeyDown);
-        
         //Captures system-defined events. We use this for intercepting media keys.
         CGEventMask systemEvents = CGEventMaskBit(NX_SYSDEFINED);
+        CGEventMask eventsToCapture = systemEvents;
+
+        //Captures keyup and keydown events. We use this for intercepting OS X hotkeys.
+        //Only ask for these when Accessibility has already been granted: on recent macOS
+        //versions, repeatedly attempting a privileged tap can repeatedly trigger TCC prompts.
+        if (self.class.canCaptureKeyEvents)
+        {
+            eventsToCapture |= CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(kCGEventKeyDown);
+        }
         
         _tap = CGEventTapCreate(kCGSessionEventTap, 
                                 kCGHeadInsertEventTap,
                                 kCGEventTapOptionDefault,
-                                keyEvents | systemEvents,
+                                eventsToCapture,
                                 _handleEventFromTap,
                                 (__bridge void *)self);
         
@@ -241,6 +247,13 @@ static CGEventRef _handleEventFromTap(CGEventTapProxy proxy, CGEventType type, C
 {
     if (self.status == BXKeyboardEventTapNotTapping)
     {
+        if (!self.class.canCaptureKeyEvents)
+        {
+            self.status = BXKeyboardEventTapNotTapping;
+            [self.delegate eventTapDidFinishAttaching: self];
+            return;
+        }
+
         self.status = BXKeyboardEventTapInstalling;
         if (self.usesDedicatedThread)
         {

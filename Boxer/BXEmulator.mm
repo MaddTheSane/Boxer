@@ -653,7 +653,9 @@ static BOOL _hasStartedEmulator = NO;
 {
 	switch (joytype)
 	{
-		case JOY_NONE:
+		case JOY_DISABLED:
+		case JOY_NONE_FOUND:
+		case JOY_ONLY_FOR_MAPPING:
 			return BXNoJoystickSupport;
 			break;
 		case JOY_2AXIS:
@@ -1008,8 +1010,8 @@ static BOOL _hasStartedEmulator = NO;
             //Create a new configuration instance and feed it an empty set of parameters.
             char const *argv[0];
             commandLine = new CommandLine(0, argv);
-            configuration = new Config(commandLine);
-            control = configuration;
+            control.reset(new Config(commandLine));
+            configuration = control.get();
             
             //Sets up the vast swathes of DOSBox configuration file parameters,
             //and registers the shell to start up when we finish initializing.
@@ -1035,7 +1037,16 @@ static BOOL _hasStartedEmulator = NO;
 	catch (char *errMessage)
 	{
         self.executing = NO;
-        
+
+        // ObjC exceptions don't trigger C++ stack unwinding, so we must
+        // clean up DOSBox state explicitly before raising.
+        SDL_Quit();
+        [self.videoHandler shutdown];
+        control.reset();
+        configuration = NULL;
+        delete commandLine;
+        commandLine = NULL;
+
         NSString *reason = [NSString stringWithCString: errMessage encoding: BXDirectStringEncoding];
         [NSException raise: BXEmulatorUnrecoverableException
                     format: @"DOSBox aborted with the following error: %@", reason];
@@ -1043,9 +1054,18 @@ static BOOL _hasStartedEmulator = NO;
     catch (boxer_emulatorException &e)
     {
         self.executing = NO;
+
+        // ObjC exceptions don't trigger C++ stack unwinding, so we must
+        // clean up DOSBox state explicitly before raising.
+        SDL_Quit();
+        [self.videoHandler shutdown];
+        control.reset();
+        configuration = NULL;
+        delete commandLine;
+        commandLine = NULL;
+
         NSException *exception = [BXEmulatorException exceptionWithName: BXEmulatorUnrecoverableException
                                                       originalException: &e];
-        
         [exception raise];
     }
 	catch (int)
@@ -1055,10 +1075,9 @@ static BOOL _hasStartedEmulator = NO;
 	//Any other exception is a genuine fuckup and needs to be thrown all the way up.
 	
 	//Clean up after DOSBox finishes.
-	SDL_Quit();
+    SDL_Quit();
 	[self.videoHandler shutdown];
-    control = NULL;
-    delete configuration;
+    control.reset();
     configuration = NULL;
     delete commandLine;
     commandLine = NULL;
