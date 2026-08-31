@@ -14,8 +14,8 @@
 
 //Keys and constants used in the dictionary for requestedMIDIDeviceDescription.
 
-/// Possible values for the @c BXMIDIMusicTypeKey of MIDI device description dictionaries.
-/// Set by the game configuration's @c mididevice setting to determine what kind of MIDI
+/// Possible values for the ``BXMIDIMusicTypeKey`` of MIDI device description dictionaries.
+/// Set by the game configuration's `mididevice` setting to determine what kind of MIDI
 /// device the emulator should request.
 typedef NS_ENUM(NSInteger, BXMIDIMusicType) {
     /// The emulator should disable MIDI playback altogether.
@@ -35,8 +35,8 @@ typedef NS_ENUM(NSInteger, BXMIDIMusicType) {
     BXMIDIMusicMT32        = 2
 };
 
-/// An `NSNumber` corresponding to one of the `BXMIDIMusicType` constants.
-/// If `BXMIDIMusicDisabled`, Boxer will disable MIDI playback.
+/// An `NSNumber` corresponding to one of the ``BXMIDIMusicType`` constants.
+/// If ``BXMIDIMusicDisabled``, Boxer will disable MIDI playback.
 extern NSString * const BXMIDIMusicTypeKey;
 
 /// An `NSNumber` boolean indicating whether an external General MIDI playback device
@@ -44,12 +44,12 @@ extern NSString * const BXMIDIMusicTypeKey;
 extern NSString * const BXMIDIPreferExternalKey;
 
 /// An `NSNumber` indicating the unique ID of the external device to use for MIDI playback.
-/// Only applicable if `BXMIDIPreferExternal` is `YES`.
+/// Only applicable if ``BXMIDIPreferExternal`` is `YES`.
 extern NSString * const BXMIDIExternalDeviceUniqueIDKey;
 
 /// An `NSNumber` indicating the numeric enumeration order of the external device to use for MIDI playback.
-/// Only applicable if `BXMIDIPreferExternalKey` is `YES`.
-/// - note: If both this and `BXMIDIExternalDeviceUniqueIDKey` are omitted, delegates should return the
+/// Only applicable if ``BXMIDIPreferExternalKey`` is `YES`.
+/// - note: If both this and ``BXMIDIExternalDeviceUniqueIDKey`` are omitted, delegates should return the
 /// first appropriate MIDI device that is found.
 extern NSString * const BXMIDIExternalDeviceIndexKey;
 
@@ -62,7 +62,7 @@ extern NSString * const BXMIDIExternalDeviceNeedsMT32SysexDelaysKey;
 
 @protocol BXMIDIDevice;
 
-/// The `BXAudio` category extends `BXEmulator` with functionality
+/// The `BXAudio` category extends ``BXEmulator`` with functionality
 /// for controlling DOSBox's audio emulation and output.
 @interface BXEmulator (BXAudio) <BXEmulatedMT32Delegate>
 

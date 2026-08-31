@@ -79,7 +79,7 @@
         NSError *err;
         NSInteger encodingVersion = [aDecoder decodeIntegerForKey: @"encodingVersion"];
         if (encodingVersion > BXCurrentDriveEncodingVersion) {
-            [aDecoder failWithError:[NSError errorWithDomain:NSCocoaErrorDomain code:NSCoderReadCorruptError userInfo:@{NSLocalizedDescriptionKey: [NSString localizedStringWithFormat:@"Unable to decode drive: encoding version %ld is higher than supported version %ld.", (long)encodingVersion, (long)BXCurrentDriveEncodingVersion], NSDebugDescriptionErrorKey: [NSString localizedStringWithFormat:@"Unable to decode drive: encoding version %ld is higher than supported version %ld.", (long)encodingVersion, (long)BXCurrentDriveEncodingVersion]}]];
+            [aDecoder failWithError:[NSError errorWithDomain:NSCocoaErrorDomain code:NSCoderReadCorruptError userInfo:@{NSLocalizedDescriptionKey: [NSString localizedStringWithFormat:NSLocalizedString(@"Unable to decode drive: encoding version %ld is higher than supported version %ld.", @"Unable to decode drive: encoding version %ld is higher than supported version %ld."), (long)encodingVersion, (long)BXCurrentDriveEncodingVersion], NSDebugDescriptionErrorKey: [NSString stringWithFormat:@"Unable to decode drive: encoding version %ld is higher than supported version %ld.", (long)encodingVersion, (long)BXCurrentDriveEncodingVersion]}]];
             return nil;
         }
         

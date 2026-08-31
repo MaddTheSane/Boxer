@@ -88,7 +88,7 @@ extension NSException {
         return parsed.description
     }
     
-    /// Returns the results of `-callstackSymbols` parsed into NSDictionaries with the attributes listed in `ADBCallstackKeys`.
+    /// Returns the results of `-callstackSymbols` parsed into NSDictionaries with the attributes listed in ``ADBCallstackKeys``.
     @objc func callStackDescriptions() -> [[ADBCallstackKeys: Any]] {
         let symbols = callStackSymbols
         

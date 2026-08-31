@@ -30,10 +30,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// ADBErrorHelpers adds helper methods to @c NSError to make it nicer to work with.
+/// ADBErrorHelpers adds helper methods to `NSError` to make it nicer to work with.
 @interface NSError (ADBErrorHelpers)
 
-/// Returns @c YES if the error has the specified error domain and code, @c NO otherwise.
+/// Returns `YES` if the error has the specified error domain and code, `NO` otherwise.
 - (BOOL) matchesDomain: (NSErrorDomain)errorDomain code: (NSInteger)errorCode;
 
 /// Whether this is a standard Cocoa user-cancelled-operation error.
@@ -42,9 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-/// Keys included in @c callstackDescriptions dictionaries
+/// Keys included in ``NSException\callstackDescriptions`` dictionaries
 typedef NSString *ADBCallstackKeys NS_STRING_ENUM;
-/// The raw output of callstack_symbols.
+/// The raw output of `callstack_symbols`.
 extern ADBCallstackKeys const ADBCallstackRawSymbol;
 /// The name of the binary in which the stack entry is located.
 extern ADBCallstackKeys const ADBCallstackLibraryName;
@@ -53,15 +53,15 @@ extern ADBCallstackKeys const ADBCallstackAddress;
 /// The raw function name, mangled in the case of C++ and Swift names.
 extern ADBCallstackKeys const ADBCallstackFunctionName;
 /// For C++ and Swift functions, a demangled version of the function name;
-/// otherwise identical to @c ADBCallstackFunctionName
+/// otherwise identical to ``ADBCallstackFunctionName``.
 extern ADBCallstackKeys const ADBCallstackHumanReadableFunctionName;
-/// An @c NSNumber representing the offset within the function.
+/// An `NSNumber` representing the offset within the function.
 extern ADBCallstackKeys const ADBCallstackSymbolOffset;
 
 @interface NSException (ADBExceptionHelpers)
 
-/// Takes a mangled C++ function name produced by @c callstackSymbols or @c backtrace_symbols and returns a demangled version.
-/// Returns @c nil if the provided string could not be resolved (which will be the case if it is a C or Objective C symbol name).
+/// Takes a mangled C++ function name produced by `callstackSymbols` or `backtrace_symbols` and returns a demangled version.
+/// Returns `nil` if the provided string could not be resolved (which will be the case if it is a C or Objective C symbol name).
 + (nullable NSString *) demangledCPlusPlusFunctionName: (NSString *)functionName;
 
 @end
