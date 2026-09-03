@@ -1570,6 +1570,10 @@ NSString * const BXGameImportedNotificationType     = @"BXGameImported";
     
     //Let the display sleep while we're at the shell
     [self _syncSuppressesDisplaySleep];
+
+    //The session is ready to launch another URL once DOSBox has returned to
+    //an idle shell, including the initial shell reached after startup.
+    self.canOpenURLs = !self.emulator.isRunningActiveProcess;
     
     //If this was the last program in the stack, then clean up a bunch of our state
     //and switch back to the launcher panel if appropriate.
