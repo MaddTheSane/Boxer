@@ -5011,6 +5011,30 @@
         }
       }
     },
+    "custom-shaders-item.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"Custom Shaders\"; ObjectID = \"custom-shaders-item\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Custom Shaders"
+          }
+        }
+      }
+    },
+    "custom-shaders-menu.title" : {
+      "comment" : "Class = \"NSMenu\"; title = \"Custom Shaders\"; ObjectID = \"custom-shaders-menu\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Custom Shaders"
+          }
+        }
+      }
+    },
     "Wks-tC-vJz.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Shader Properties…\"; ObjectID = \"Wks-tC-vJz\";",
       "extractionState" : "extracted_with_value",

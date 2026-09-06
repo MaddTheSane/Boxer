@@ -509,6 +509,14 @@
                                                 <action selector="toggleRenderingStyle:" target="-1" id="2384"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="shader-separator"/>
+                                        <menuItem title="Custom Shaders" id="custom-shaders-item">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="refreshShaderPresetMenu:" target="-1" id="refresh-custom-shaders"/>
+                                            </connections>
+                                            <menu key="submenu" title="Custom Shaders" id="custom-shaders-menu"/>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>

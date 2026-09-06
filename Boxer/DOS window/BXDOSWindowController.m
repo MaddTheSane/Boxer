@@ -166,6 +166,15 @@ NSString * const BXDOSWindowFullscreenSizeFormat = @"Fullscreen size for %@";
     
     //Display the loading panel by default.
     [self switchToPanel: BXDOSWindowLoadingPanel animate: NO];
+
+    NSString *savedShaderPresetPath = [[NSUserDefaults standardUserDefaults] stringForKey:@"shaderPresetPath"];
+    if (savedShaderPresetPath.length > 0)
+    {
+        if (![self.renderingView loadShaderPresetAtPath:savedShaderPresetPath])
+        {
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"shaderPresetPath"];
+        }
+    }
     
 	self.window.preservesContentDuringLiveResize = NO;
 	self.window.acceptsMouseMovedEvents = YES;
@@ -458,8 +467,44 @@ NSString * const BXDOSWindowFullscreenSizeFormat = @"Fullscreen size for %@";
 - (IBAction) toggleRenderingStyle: (id <NSValidatedUserInterfaceItem>)sender
 {
 	BXRenderingStyle style = (BXRenderingStyle)sender.tag;
+	[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"shaderPresetPath"];
+	self.renderingView.renderingStyle = style;
 	[[NSUserDefaults standardUserDefaults] setInteger: style
                                                forKey: @"renderingStyle"];
+}
+
+- (IBAction)refreshShaderPresetMenu:(id)sender
+{
+    // The menu is populated during validation immediately before it is displayed.
+}
+
+- (IBAction)selectShaderPreset:(NSMenuItem *)sender
+{
+    NSString *presetPath = sender.representedObject;
+    if (![presetPath isKindOfClass:NSString.class])
+    {
+        return;
+    }
+
+    if ([self.renderingView loadShaderPresetAtPath:presetPath])
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:presetPath forKey:@"shaderPresetPath"];
+    }
+}
+
+- (void)populateShaderPresetMenu:(NSMenu *)menu
+{
+    [menu removeAllItems];
+    for (NSString *presetPath in self.renderingView.availableShaderPresetPaths)
+    {
+        NSString *title = presetPath.lastPathComponent.stringByDeletingPathExtension;
+        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:title
+                                                     action:@selector(selectShaderPreset:)
+                                              keyEquivalent:@""];
+        item.target = nil;
+        item.representedObject = presetPath;
+        [menu addItem:item];
+    }
 }
 
 - (IBAction) toggleHerculesTintMode: (id <NSValidatedUserInterfaceItem>)sender
@@ -926,7 +971,8 @@ NSString * const BXDOSWindowFullscreenSizeFormat = @"Fullscreen size for %@";
 	if (theAction == @selector(toggleRenderingStyle:))
 	{
 		BXRenderingStyle renderingStyle = (BXRenderingStyle)theItem.tag;
-		if (renderingStyle == self.renderingStyle)
+			if (renderingStyle == self.renderingStyle &&
+                [[NSUserDefaults standardUserDefaults] stringForKey:@"shaderPresetPath"].length == 0)
         {
             theItem.state = NSControlStateValueOn;
         }
@@ -934,8 +980,22 @@ NSString * const BXDOSWindowFullscreenSizeFormat = @"Fullscreen size for %@";
         {
             theItem.state = NSControlStateValueOff;
         }
-		return YES;
-	}
+			return YES;
+		}
+
+    if (theAction == @selector(refreshShaderPresetMenu:))
+    {
+        [self populateShaderPresetMenu:theItem.submenu];
+        return YES;
+    }
+
+    if (theAction == @selector(selectShaderPreset:))
+    {
+        NSString *presetPath = theItem.representedObject;
+        theItem.state = [presetPath isEqualToString:self.renderingView.selectedShaderPresetPath]
+            ? NSControlStateValueOn : NSControlStateValueOff;
+        return YES;
+    }
     
 	if (theAction == @selector(toggleHerculesTintMode:))
 	{
