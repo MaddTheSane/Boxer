@@ -371,7 +371,7 @@ NSString * const BXGameImportedNotificationType     = @"BXGameImported";
             //Check if the user was running a program last time, and restore that if available.
 		    NSString *previousPath = [self.gameSettings objectForKey: BXGameboxSettingsLastProgramPathKey];
             NSURL *previousURL = nil;
-            if (previousPath && !previousPath.isAbsolutePath)
+            if (previousPath.length > 0)
             {
                 if (previousPath.isAbsolutePath)
                 {
