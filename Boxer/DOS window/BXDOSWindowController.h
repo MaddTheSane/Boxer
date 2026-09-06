@@ -170,6 +170,10 @@ extern NSNotificationName const BXViewDidLiveResizeNotification;
 /// Toggle the emulator's active rendering filter.
 - (IBAction) toggleRenderingStyle: (id)sender;
 
+/// Refresh and select presets from the bundled custom shader menu.
+- (IBAction) refreshShaderPresetMenu: (id)sender;
+- (IBAction) selectShaderPreset: (id)sender;
+
 /// Increase the draw size of the fullscreen window.
 - (IBAction) incrementFullscreenSize: (id)sender;
 /// Decrease the draw size of the fullscreen window.

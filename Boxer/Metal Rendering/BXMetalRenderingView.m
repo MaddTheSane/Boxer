@@ -46,6 +46,7 @@
     NSRect _viewportRect;
     NSRect _targetViewportRect;
     BXRenderingStyle _renderingStyle;
+    NSString *_selectedShaderPresetPath;
 }
 
 @synthesize currentFrame=_currentFrame;
@@ -100,39 +101,94 @@
     return YES;
 }
 
-- (void)setRenderingStyle:(BXRenderingStyle)renderingStyle {
-    if (renderingStyle == _renderingStyle)
+- (NSArray<NSString *> *)availableShaderPresetPaths
+{
+    NSURL *shadersURL = [NSBundle.mainBundle.resourceURL URLByAppendingPathComponent:@"Shaders" isDirectory:YES];
+    NSDirectoryEnumerator<NSURL *> *enumerator = [[NSFileManager defaultManager]
+        enumeratorAtURL:shadersURL
+        includingPropertiesForKeys:@[NSURLIsRegularFileKey]
+        options:(NSDirectoryEnumerationSkipsHiddenFiles | NSDirectoryEnumerationSkipsPackageDescendants)
+        errorHandler:nil];
+
+    if (enumerator == nil)
     {
-        return;
+        return @[];
     }
-    
+
+    NSMutableArray<NSString *> *presetPaths = [NSMutableArray array];
+    for (NSURL *presetURL in enumerator)
+    {
+        NSNumber *isRegularFile = nil;
+        [presetURL getResourceValue:&isRegularFile forKey:NSURLIsRegularFileKey error:nil];
+        if (!isRegularFile.boolValue || ![presetURL.pathExtension.lowercaseString isEqualToString:@"slangp"])
+        {
+            continue;
+        }
+
+        NSString *relativePath = [presetURL.path substringFromIndex:shadersURL.path.length];
+        relativePath = [relativePath stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"/"]];
+        if (relativePath.length > 0)
+        {
+            [presetPaths addObject:relativePath];
+        }
+    }
+
+    [presetPaths sortUsingComparator:^NSComparisonResult(NSString *first, NSString *second) {
+        return [first.lastPathComponent localizedStandardCompare:second.lastPathComponent];
+    }];
+    return presetPaths;
+}
+
+- (NSString *)selectedShaderPresetPath
+{
+    return _selectedShaderPresetPath;
+}
+
+- (BOOL)loadShaderPresetAtPath:(NSString *)presetPath
+{
+    if (presetPath.length == 0 || ![self.availableShaderPresetPaths containsObject:presetPath])
+    {
+        return NO;
+    }
+
+    NSURL *shadersURL = [NSBundle.mainBundle.resourceURL URLByAppendingPathComponent:@"Shaders" isDirectory:YES];
+    NSURL *presetURL = [shadersURL URLByAppendingPathComponent:presetPath];
+    NSError *error = nil;
+    if (![_filterChain setShaderFromURL:presetURL error:&error])
+    {
+        NSLog(@"Could not load shader preset at %@: %@", presetPath, error.localizedDescription);
+        return NO;
+    }
+
+    _selectedShaderPresetPath = [presetPath copy];
+    self.parameterGroups = _filterChain.shader.parameterGroups;
+    return YES;
+}
+
+- (void)setRenderingStyle:(BXRenderingStyle)renderingStyle {
     [self willChangeValueForKey:@"renderingStyle"];
     
     _renderingStyle = renderingStyle;
     
     switch (renderingStyle) {
     case BXRenderingStyleNormal: {
-        NSURL *path = [NSBundle.mainBundle URLForResource:@"Pixellate" withExtension:@"slangp" subdirectory:@"Shaders/Pixellate"];
-        [_filterChain setShaderFromURL:path error:nil];
+        [self loadShaderPresetAtPath:@"Pixellate/Pixellate.slangp"];
         break;
     }
         
     case BXRenderingStyleCRT: {
-        NSURL *path = [NSBundle.mainBundle URLForResource:@"CRT Geom" withExtension:@"slangp" subdirectory:@"Shaders/CRT Geom"];
-        [_filterChain setShaderFromURL:path error:nil];
+        [self loadShaderPresetAtPath:@"CRT Geom/CRT Geom.slangp"];
         break;
     }
         
     case BXRenderingStyleSmoothed: {
-        NSURL *path = [NSBundle.mainBundle URLForResource:@"Smooth" withExtension:@"slangp"  subdirectory:@"Shaders/Smooth"];
-        [_filterChain setShaderFromURL:path error:nil];
+        [self loadShaderPresetAtPath:@"Smooth/Smooth.slangp"];
         break;
     }
     }
     
     [self didChangeValueForKey:@"renderingStyle"];
     
-    self.parameterGroups = _filterChain.shader.parameterGroups;
 }
 
 - (void)updateWithFrame:(BXVideoFrame *)frame {

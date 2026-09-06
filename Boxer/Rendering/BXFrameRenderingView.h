@@ -36,6 +36,16 @@ typedef NS_ENUM(NSInteger, BXRenderingStyle) {
 /// Set/get the current rendering style of the view.
 @property (readwrite, nonatomic) BXRenderingStyle renderingStyle;
 
+/// Relative paths of the shader presets available in the application bundle.
+@property (readonly, nonatomic) NSArray<NSString *> *availableShaderPresetPaths;
+
+/// The relative path of the currently loaded shader preset, if known.
+@property (readonly, nullable, nonatomic) NSString *selectedShaderPresetPath;
+
+/// Loads a shader preset discovered in availableShaderPresetPaths.
+/// Returns NO without changing the current shader if the preset cannot be found or loaded.
+- (BOOL)loadShaderPresetAtPath:(NSString *)presetPath;
+
 /// Whether this rendering view can render in the specified style.
 - (BOOL) supportsRenderingStyle: (BXRenderingStyle)style;
 
